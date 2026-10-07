@@ -862,9 +862,9 @@ function pic(box, img, alt, sceneType, cb){
 
 // Hero
 const HERO = [
-  ["https://commons.wikimedia.org/wiki/Special:Redirect/file/Zipa_Plaza.jpg?width=1400","plaza","Plaza principal de Zipaquirá"],
-  ["https://commons.wikimedia.org/wiki/Special:Redirect/file/Parque_Principal_de_Zipaquir%C3%A1_-_panoramio.jpg?width=1400","plaza","Parque principal de Zipaquirá"],
-  ["https://commons.wikimedia.org/wiki/Special:Redirect/file/Palacio_municipal_de_zipaquira_casco_urbano.jpg?width=1200","plaza","Arquitectura del centro histórico de Zipaquirá"]
+  ["https://commons.wikimedia.org/wiki/Special:Redirect/file/Parque_Principal_de_Zipaquir%C3%A1_-_panoramio.jpg?width=1600","plaza","Parque principal de Zipaquirá"],
+  ["https://commons.wikimedia.org/wiki/Special:Redirect/file/Plaza_principal_de_Zipaquira..JPG?width=1600","plaza","Plaza de los Comuneros de Zipaquirá"],
+  ["https://commons.wikimedia.org/wiki/Special:Redirect/file/Zipa_Plaza.jpg?width=1600","plaza","Centro histórico de Zipaquirá"]
 ];
 $("#heroArches").append(...HERO.map(h=>{ const d = el("div",{class:"arch"}); pic(d,h[0],h[2],h[1]); return d; }));
 
