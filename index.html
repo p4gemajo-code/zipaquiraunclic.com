@@ -661,7 +661,7 @@ const PLACES = [
    imp:"Se llamó Plaza Agustín Zapata y fue sede del mercado municipal; se renovó con motivo del bicentenario de la Independencia. Tiene una escultura de Antonio Nariño y una fuente que antes estaba en la Plaza de los Comuneros.",
    act:["Ver la escultura de Antonio Nariño","Tomar un café o almorzar en la plaza","Disfrutar el ambiente nocturno de sus bares"],
    loc:"Calle 5, centro de Zipaquirá", rec:"Buen lugar para hacer una pausa gastronómica durante el recorrido.", p:"Entrada libre", h:"Espacio público"},
-  {s:"plaza", t:"Plazas y parques", n:"Plaza de los Mártires (Parque de la Floresta)", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Plaza_de_los_martires_de_Zipaquir%C3%A1.jpg", credit:"https://commons.wikimedia.org/wiki/File:Plaza_de_los_martires_de_Zipaquir%C3%A1.jpg", author:"POeeurdjds", license:"CC BY-SA 4.0",
+  {s:"plaza", t:"Plazas y parques", n:"Plaza de los Mártires (Parque de la Floresta)", img:"https://www.zipaquira.travel/wp-content/uploads/2025/12/1-8-1024x683.jpg", credit:"https://www.zipaquira.travel/plazas-y-parques/", author:"Zipaquirá Travel",
    d:"Plaza con un obelisco dedicado a la memoria de seis mártires locales.",
    imp:"El obelisco representó en su día a las provincias del antiguo departamento de Quesada y hoy lleva los nombres de seis mártires importantes para la historia de Zipaquirá.",
    act:["Leer los nombres y la historia del monumento","Hacer una parada tranquila en el recorrido"],
@@ -696,7 +696,7 @@ const PLACES = [
    imp:"Es el mejor lugar para leer la historia del municipio en su arquitectura: fachadas de piedra, plazas y casonas.",
    act:["Recorrido a pie y fotografía urbana","Café y compras en comercio local"],
    loc:"Centro histórico", rec:"Usa calzado cómodo; es un recorrido para hacer sin afán.", p:"Entrada libre", h:"Espacio público"},
-  {s:"tren", t:"Experiencia", n:"Tren turístico de la Sabana", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Tren_de_la_Sabana_en_zipaquira.JPG", credit:"https://commons.wikimedia.org/wiki/File:Tren_de_la_Sabana_en_zipaquira.JPG",
+  {s:"tren", t:"Experiencia", n:"Tren turístico de la Sabana", img:"https://www.zipaquira.travel/wp-content/uploads/2022/04/tren_zipa.jpg", credit:"https://www.zipaquira.travel/estacion-del-tren-2/", author:"Zipaquirá Travel",
    d:"Llega desde Bogotá en tren y empieza el paseo desde la estación.",
    imp:"Según guías de viaje funciona fines de semana y festivos, con salida desde la Estación de la Sabana en Bogotá, y suele llenarse.",
    act:["Disfrutar el trayecto por la Sabana","Combinar el viaje con el recorrido por el centro"],
@@ -860,7 +860,7 @@ function pic(box, img, alt, sceneType, cb){
 }
 
 // Hero
-const HERO = [["https://commons.wikimedia.org/wiki/Special:Redirect/file/Iglesia_Zipaquira.JPG","iglesia","Templo y plaza del centro de Zipaquirá"],["https://commons.wikimedia.org/wiki/Special:Redirect/file/Plaza_principal_de_Zipaquira..JPG","plaza","Plaza principal de Zipaquirá"],["https://commons.wikimedia.org/wiki/Special:Redirect/file/Estación_de_Tren,_Zipaquirá.JPG","montana","Paisaje de la Sabana cerca de Zipaquirá"]];
+const HERO = [["https://commons.wikimedia.org/wiki/Special:Redirect/file/Iglesia_Zipaquira.JPG","iglesia","Templo y plaza del centro de Zipaquirá"],["https://commons.wikimedia.org/wiki/Special:Redirect/file/Plaza_principal_de_Zipaquira..JPG","plaza","Plaza principal de Zipaquirá"],["https://www.zipaquira.travel/wp-content/uploads/2022/04/tren_zipa.jpg","tren","Estación del Tren de Zipaquirá"]];
 $("#heroArches").append(...HERO.map(h=>{ const d = el("div",{class:"arch"}); pic(d,h[0],h[2],h[1]); return d; }));
 
 // Proyecto
