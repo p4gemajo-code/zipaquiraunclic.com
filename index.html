@@ -671,6 +671,11 @@ const PLACES = [
    imp:"Los templos cuentan cómo se desarrollaron la fe, el arte y el trazado urbano de la población desde la época colonial.",
    act:["Admirar fachadas y detalles arquitectónicos","Visitar con respeto fuera de los horarios de culto"],
    loc:"Alrededor de la Plaza de los Comuneros", rec:"Respeta las ceremonias; evita flash y conversaciones en voz alta dentro de los templos.", p:"Entrada libre (templos)", h:"Según cada parroquia"},
+  {s:"sal", t:"Patrimonio", n:"Catedral de Sal de Zipaquirá", img:"", credit:"https://www.semana.com/turismo/articulo/programe-su-visita-a-la-catedral-de-sal-de-zipaquira-cuanto-tiempo-dura-el-recorrido/202412/", author:"Semana",
+   d:"Uno de los atractivos turísticos más reconocidos de Zipaquirá, construido dentro de una antigua mina de sal.",
+   imp:"La visita combina patrimonio, arquitectura, geología y tradición religiosa. El artículo de Semana explica el recorrido y las diferentes experiencias disponibles.",
+   act:["Conocer la historia y arquitectura subterránea","Recorrer las naves y espacios del complejo","Consultar previamente la información oficial de visita"],
+   loc:"Parque de la Sal, Zipaquirá", rec:"Consulta horarios, tarifas y condiciones vigentes antes de planear la visita.", p:"Consultar tarifa vigente", h:"Consultar horario actualizado"},
   {s:"arqueo", t:"Cultura", n:"Museo Arqueológico de Zipaquirá", img:"https://elturismoencolombia.com/wp-content/uploads/2023/11/Museo-Arqueologico-Zipaquira-Cundinamarca-Colombia.jpg", credit:"https://elturismoencolombia.com/a-donde-ir/cundinamarca-colombia-travel/museo-arqueologico-zipaquira-colombia/", author:"El Turismo en Colombia",
    d:"Museo dedicado a la historia y al patrimonio arqueológico de la región.", 
    imp:"Una parada para acercarte a la historia ancestral de Zipaquirá y conocer objetos y vestigios relacionados con los pueblos que habitaron la región.",
@@ -874,7 +879,7 @@ function renderPlaces(){
   PLACES.filter(p=>activeTag==="Todos"||p.t===activeTag).forEach(p=>{
     const arch = el("div",{class:"arch"});
     const kids = [arch];
-    const cr = el("p",{class:"credit",hidden:"",html:p.credit ? `Foto: <a href="${p.credit}" target="_blank" rel="noopener">Wikimedia Commons</a>${p.author? ` · Autor: ${p.author}`: ""}${p.license? ` · Licencia: ${p.license}`: ""}` : ""});
+    const cr = el("p",{class:"credit",hidden:"",html:p.credit ? `Fuente: <a href="${p.credit}" target="_blank" rel="noopener">${p.author||"ver fuente"}</a>${p.license? ` · Licencia: ${p.license}`: ""}` : ""});
     pic(arch,p.img,p.n,p.s,()=>{ if(p.credit) cr.hidden=false; });
     kids.push(cr);
     kids.push(
@@ -1030,7 +1035,7 @@ document.addEventListener("keydown",e=>{ if(e.key==="Escape"){ nav.classList.rem
 
 // Créditos
 (function(){ const ul=$("#credits"); const seen=new Set();
-  [...PLACES.map(p=>[p.n,p.credit]),...FOOD.map(f=>[f.n,f.credit])].forEach(([n,c])=>{ if(c&&!seen.has(c)){ seen.add(c); ul.append(el("li",{html:`${n}: <a href="${c}" target="_blank" rel="noopener">página del archivo (autor y licencia)</a>`})); } });
+  [...PLACES.map(p=>[p.n,p.credit]),...FOOD.map(f=>[f.n,f.credit])].forEach(([n,c])=>{ if(c&&!seen.has(c)){ seen.add(c); ul.append(el("li",{html:`${n}: <a href="${c}" target="_blank" rel="noopener">fuente y créditos</a>`})); } });
 })();
 </script>
 </body>
