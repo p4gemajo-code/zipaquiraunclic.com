@@ -236,7 +236,7 @@ footer .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255
 
 /* ---------- Ampliación ---------- */
 .card .arch img,.arch img,.plate img,.gal img{display:block;width:100%;height:100%;object-fit:cover}
-.credit{font-size:.72rem;color:var(--muted);margin-top:-6px}
+.credit{font-size:.72rem;color:var(--muted);margin-top:-6px}.credit[hidden]{display:none}
 .hero .lead{max-width:38rem}
 .pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
 .pill-row span{font-size:.8rem;font-weight:500;padding:5px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.35);color:#e4edff}
@@ -252,7 +252,7 @@ footer .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255
 .cat-title:first-of-type{margin-top:0}
 .cat-title::after{content:"";flex:1;height:1px;background:var(--line)}
 .dish .plate{width:96px;height:96px}
-.dish .tag{font-size:.75rem;font-weight:600;color:#116b69}
+.dish.featured{grid-column:1/-1;background:linear-gradient(135deg,#fff,#ffe6df);border-color:#f3b9aa}.dish.featured .plate{width:132px;height:132px;border-color:var(--coral)}.dish.featured h3{font-size:1.5rem}.dish.featured .tag{color:#a8381f}.dish .tag{font-size:.75rem;font-weight:600;color:#116b69}
 .info-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
 .info{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:22px}
 .info h3{font-size:1.15rem;color:var(--navy);margin-bottom:8px}
@@ -560,7 +560,7 @@ footer .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255
         <a href="#lugares">Lugares</a><a href="#historia">Historia y cultura</a><a href="#gastronomia">Gastronomía</a><a href="#actividades">Actividades</a><a href="#agenda">Agenda</a><a href="#precios">Precios y horarios</a><a href="#hoteles">Hoteles y restaurantes</a><a href="#visita">Tu visita</a><a href="#sostenible">Turismo responsable</a><a href="#opiniones">Opiniones</a><a href="#contacto">Contacto</a>
       </nav>
     </div>
-    <p class="legal">Aplicación digital para promover el turismo por medio de la identificación turística de Zipaquirá, Cundinamarca. Información sujeta a cambios; confirma datos con cada sitio antes de viajar. Fuentes: guías turísticas y medios locales citados en cada sección.</p>
+    <details class="legal" style="margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14)"><summary style="cursor:pointer;font-weight:600;color:#e4edff">Créditos de fotografías y derechos de autor</summary><p style="margin-top:10px">Las fotografías reales pertenecen a sus autores y se muestran con enlace a su página en Wikimedia Commons, donde constan el autor y la licencia de cada archivo. Las imágenes sin crédito son ilustraciones de reemplazo. Reutilizar una foto exige cumplir la licencia indicada en su página.</p><ul id="credits" style="padding-left:18px;font-size:.85rem"></ul></details><p class="legal">Aplicación digital para promover el turismo por medio de la identificación turística de Zipaquirá, Cundinamarca. Información sujeta a cambios; confirma datos con cada sitio antes de viajar. Fuentes: guías turísticas y medios locales citados en cada sección.</p>
   </div>
 </footer>
 
@@ -639,7 +639,7 @@ const mapLink = n => "https://www.google.com/maps/search/" + encodeURIComponent(
 
 /* Fotografías: coloca tus archivos en la carpeta /img con el nombre indicado en "img".
    Si el archivo no existe, la tarjeta muestra una ilustración de reemplazo.
-   Indica en "credit" el autor y la licencia de cada foto. */
+   En "credit" va el enlace a la página del archivo con autor y licencia. */
 const GOALS = [
   {t:"Promover diversos destinos", d:"Más lugares, rutas y experiencias para repartir el turismo por todo el municipio."},
   {t:"Información clara y organizada", d:"Lugares, precios, horarios y recomendaciones en un solo sitio."},
@@ -651,12 +651,12 @@ const GOALS = [
 ];
 
 const PLACES = [
-  {s:"plaza", t:"Plazas y parques", n:"Plaza de los Comuneros", img:"img/plaza-comuneros.jpg", credit:"",
+  {s:"plaza", t:"Plazas y parques", n:"Plaza de los Comuneros", img:"https://es.wikipedia.org/wiki/Special:FilePath/Plaza_principal_de_Zipaquira..JPG?width=900", credit:"https://es.wikipedia.org/wiki/Archivo:Plaza_principal_de_Zipaquira..JPG",
    d:"La plaza principal del centro histórico, también conocida como Plaza Mayor o Plaza González Forero.",
    imp:"Su nombre recuerda las Capitulaciones de Zipaquirá de 1781. Reúne el templo diocesano y el Palacio Municipal, y es el punto de partida natural del recorrido por el casco antiguo.",
    act:["Caminar y orientarte antes de recorrer el centro","Observar la arquitectura colonial y republicana","Tomar fotografías y descansar en la plaza"],
    loc:"Centro histórico de Zipaquirá", rec:"Empieza aquí tu recorrido a pie y sigue hacia el Parque de la Independencia.", p:"Entrada libre", h:"Espacio público"},
-  {s:"plaza", t:"Plazas y parques", n:"Parque de la Independencia", img:"img/parque-independencia.jpg", credit:"",
+  {s:"plaza", t:"Plazas y parques", n:"Parque de la Independencia", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_Independencia_01.JPG?width=900", credit:"https://commons.wikimedia.org/wiki/File:Plaza_Independencia_01.JPG",
    d:"Antigua plaza de mercado convertida en espacio de encuentro con cafés, restaurantes y bares.",
    imp:"Se llamó Plaza Agustín Zapata y fue sede del mercado municipal; se renovó con motivo del bicentenario de la Independencia. Tiene una escultura de Antonio Nariño y una fuente que antes estaba en la Plaza de los Comuneros.",
    act:["Ver la escultura de Antonio Nariño","Tomar un café o almorzar en la plaza","Disfrutar el ambiente nocturno de sus bares"],
@@ -666,7 +666,7 @@ const PLACES = [
    imp:"El obelisco representó en su día a las provincias del antiguo departamento de Quesada y hoy lleva los nombres de seis mártires importantes para la historia de Zipaquirá.",
    act:["Leer los nombres y la historia del monumento","Hacer una parada tranquila en el recorrido"],
    loc:"Zona del centro; consulta el mapa", rec:"Combínala con las demás plazas históricas del municipio.", p:"Entrada libre", h:"Espacio público"},
-  {s:"iglesia", t:"Religioso", n:"Templo diocesano y patrimonio religioso", img:"img/templo-plaza.jpg", credit:"",
+  {s:"iglesia", t:"Religioso", n:"Templo diocesano y patrimonio religioso", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Iglesia_Zipaquira.JPG?width=900", credit:"https://commons.wikimedia.org/wiki/File:Iglesia_Zipaquira.JPG",
    d:"La iglesia de piedra frente a la plaza principal y los templos de estilo colonial del municipio.",
    imp:"Los templos cuentan cómo se desarrollaron la fe, el arte y el trazado urbano de la población desde la época colonial.",
    act:["Admirar fachadas y detalles arquitectónicos","Visitar con respeto fuera de los horarios de culto"],
@@ -686,12 +686,12 @@ const PLACES = [
    imp:"Es la puerta de entrada a la vida artística local y a las muestras abiertas al público.",
    act:["Asistir a presentaciones y muestras","Conocer los procesos de formación artística"],
    loc:"Centro de Zipaquirá", rec:"Pregunta por presentaciones abiertas al público.", p:"Según la actividad", h:"Según la programación"},
-  {s:"plaza", t:"Patrimonio", n:"Calles y arquitectura del centro histórico", img:"img/centro-historico.jpg", credit:"",
+  {s:"plaza", t:"Patrimonio", n:"Calles y arquitectura del centro histórico", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Zipaquirá_City.jpg?width=900", credit:"https://commons.wikimedia.org/wiki/File:Zipaquirá_City.jpg",
    d:"Calles peatonales con tiendas y cafés, edificios coloniales y republicanos como la alcaldía, de techos verdes.",
    imp:"Es el mejor lugar para leer la historia del municipio en su arquitectura: fachadas de piedra, plazas y casonas.",
    act:["Recorrido a pie y fotografía urbana","Café y compras en comercio local"],
    loc:"Centro histórico", rec:"Usa calzado cómodo; es un recorrido para hacer sin afán.", p:"Entrada libre", h:"Espacio público"},
-  {s:"tren", t:"Experiencia", n:"Tren turístico de la Sabana", img:"img/tren-sabana.jpg", credit:"",
+  {s:"tren", t:"Experiencia", n:"Tren turístico de la Sabana", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Tren_de_la_Sabana_en_zipaquira.JPG?width=900", credit:"https://commons.wikimedia.org/wiki/File:Tren_de_la_Sabana_en_zipaquira.JPG",
    d:"Llega desde Bogotá en tren y empieza el paseo desde la estación.",
    imp:"Según guías de viaje funciona fines de semana y festivos, con salida desde la Estación de la Sabana en Bogotá, y suele llenarse.",
    act:["Disfrutar el trayecto por la Sabana","Combinar el viaje con el recorrido por el centro"],
@@ -701,7 +701,7 @@ const PLACES = [
    imp:"Es una forma activa y gratuita de conocer el municipio en familia.",
    act:["Pedalear, caminar o patinar","Parar en cafés y restaurantes del centro"],
    loc:"Vías habilitadas en Zipaquirá", rec:"Lleva agua, protección solar y consulta el recorrido vigente.", p:"Entrada libre", h:"Domingos; consultar horario actualizado"},
-  {s:"montana", t:"Naturaleza", n:"Escapadas cercanas: Suesca", img:"img/suesca.jpg", credit:"",
+  {s:"montana", t:"Naturaleza", n:"Escapadas cercanas: Suesca", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Rocas_de_Suesca.JPG?width=900", credit:"https://commons.wikimedia.org/wiki/File:Rocas_de_Suesca.JPG",
    d:"Laguna, caminatas y escalada a poca distancia.",
    imp:"Suesca, Tabio y Guatavita completan un plan de varios días por los pueblos de la Sabana.",
    act:["Caminatas y paisaje","Escalada con operadores autorizados"],
@@ -732,9 +732,10 @@ const FOOD = [
   {n:"Papas salmueras", d:"El acompañamiento clásico: papas cocidas en salmuera, según la receta tradicional.", img:"img/papas-salmueras.jpg"},
   {n:"Plato del minero", d:"Carne servida con papas saladas de textura arrugada, un clásico que cada vez es más escaso.", img:"img/plato-minero.jpg"},
   {n:"Tamal de calabaza", d:"Plato tradicional de la Sabana, servido en desayunos con productos locales.", img:"img/tamal.jpg"},
-  {n:"Trucha y productos de la zona", d:"Algunos restaurantes locales cocinan con trucha del Neusa y verduras de Cogua.", img:"img/trucha.jpg"}
+  {n:"Trucha y productos de la zona", d:"Algunos restaurantes locales cocinan con trucha del Neusa y verduras de Cogua.", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Fried_trout_Trucha_frita_con_papas_y_arroz_(31008005061).jpg?width=900", credit:"https://commons.wikimedia.org/wiki/File:Fried_trout_Trucha_frita_con_papas_y_arroz_(31008005061).jpg"}
 ];
 const SWEETS = [
+  {n:"Caramelito rojo", feat:true, d:"El dulce emblemático de Zipaquirá: un caramelo estirado de color rosado o rojo brillante, hecho solo con agua, limón y azúcar. Según guías locales se elabora en el municipio desde el siglo XIX; llegó de España y las mujeres de la región lo aprendieron en la época colonial. Las «carameleras» lo vendían a los viajeros del tren, y Jorge Velosa le dedicó una canción. Hoy lo hacen muy pocas familias, por eso comprarlo apoya una tradición que corre riesgo de perderse. Pregunta por él en negocios típicos del centro histórico o en la Plaza de los Comuneros.", img:"img/caramelito-rojo.jpg"},
   {n:"Obleas y amasijos", d:"Dulces y panes de horno que hacen parte de las tradiciones de la región.", img:"img/obleas.jpg"},
   {n:"Brevas, almíbares y tortas", d:"Postres tradicionales que se encuentran en pastelerías del centro.", img:"img/almibares.jpg"},
   {n:"Torta de queso y arroz con leche", d:"Dulces caseros con lácteos de la región.", img:"img/torta-queso.jpg"}
@@ -766,7 +767,7 @@ const ACTS = [
   {k:"Históricas", i:"book", c:"#1b2b4e", n:"Sobre la huella de los Comuneros", d:"Recorre los lugares ligados a las Capitulaciones de 1781 y descubre por qué la plaza lleva ese nombre."},
   {k:"Religiosas", i:"church", c:"#9a7117", n:"Patrimonio religioso", d:"Visita los templos del centro con calma y respeto, fuera de los horarios de culto, para apreciar su arquitectura."},
   {k:"Gastronómicas", i:"food", c:"#c9a45c", n:"Almuerzo tradicional", d:"Prueba la sobrebarriga con papas salmueras o el plato del minero en un restaurante local."},
-  {k:"Gastronómicas", i:"food", c:"#e8694f", n:"Ruta de dulces", d:"Termina el día con obleas, brevas, tortas y postres tradicionales de pastelerías del centro."},
+  {k:"Gastronómicas", i:"food", c:"#e8694f", n:"Ruta del caramelito rojo y otros dulces", d:"Busca el caramelito rojo, el dulce emblemático de Zipaquirá, y completa con obleas, brevas, tortas y postres tradicionales."},
   {k:"Familiares", i:"family", c:"#1f9d9a", n:"Paseo por parques y plazas", d:"Un plan tranquilo y gratuito para ir con niños y mayores, con cafés y heladerías cerca."},
   {k:"Recreativas", i:"bike", c:"#2a5bd7", n:"Ciclovía dominical", d:"Pedalea, camina o patina por un recorrido que pasa por el centro histórico."},
   {k:"Recreativas", i:"train", c:"#1f9d9a", n:"Viaje en tren", d:"Haz del trayecto desde Bogotá parte del paseo (consulta días y tarifas con el operador)."},
@@ -841,17 +842,17 @@ function el(tag, attrs={}, kids=[]){
   return e;
 }
 /* Foto real si existe; si no, ilustración */
-function pic(box, img, alt, sceneType){
+function pic(box, img, alt, sceneType, cb){
   box.innerHTML = scene(sceneType);
   if(!img) return;
   const im = new Image();
   im.alt = alt; im.loading = "lazy"; im.decoding = "async";
-  im.onload = ()=>{ box.innerHTML=""; box.append(im); };
+  im.onload = ()=>{ box.innerHTML=""; box.append(im); if(cb) cb(); };
   im.src = img;
 }
 
 // Hero
-const HERO = [["img/hero-1.jpg","iglesia","Templo y plaza del centro de Zipaquirá"],["img/hero-2.jpg","plaza","Plaza principal de Zipaquirá"],["img/hero-3.jpg","montana","Paisaje de la Sabana cerca de Zipaquirá"]];
+const HERO = [["https://commons.wikimedia.org/wiki/Special:FilePath/Iglesia_Zipaquira.JPG?width=900","iglesia","Templo y plaza del centro de Zipaquirá"],["https://es.wikipedia.org/wiki/Special:FilePath/Plaza_principal_de_Zipaquira..JPG?width=900","plaza","Plaza principal de Zipaquirá"],["https://commons.wikimedia.org/wiki/Special:FilePath/Estación_de_Tren,_Zipaquirá.JPG?width=900","montana","Paisaje de la Sabana cerca de Zipaquirá"]];
 $("#heroArches").append(...HERO.map(h=>{ const d = el("div",{class:"arch"}); pic(d,h[0],h[2],h[1]); return d; }));
 
 // Proyecto
@@ -863,9 +864,11 @@ let activeTag = "Todos";
 function renderPlaces(){
   const box = $("#placeCards"); box.innerHTML = "";
   PLACES.filter(p=>activeTag==="Todos"||p.t===activeTag).forEach(p=>{
-    const arch = el("div",{class:"arch"}); pic(arch,p.img,p.n,p.s);
+    const arch = el("div",{class:"arch"});
     const kids = [arch];
-    if(p.credit) kids.push(el("p",{class:"credit",text:"Foto: "+p.credit}));
+    const cr = el("p",{class:"credit",hidden:"",html:`Foto: <a href="${p.credit}" target="_blank" rel="noopener">Wikimedia Commons</a> (autor y licencia en la página del archivo)`});
+    pic(arch,p.img,p.n,p.s,()=>{ if(p.credit) cr.hidden=false; });
+    kids.push(cr);
     kids.push(
       el("span",{class:"chip","data-t":p.t,text:p.t}),
       el("h3",{text:p.n}),
@@ -902,7 +905,9 @@ $("#timeline").append(...ERAS.map((e,i)=>{
 $("#pillars").append(...PILLARS.map(p=>el("div",{class:"pillar"},[el("h3",{text:p.t}),el("p",{text:p.d})])));
 
 // Gastronomía
-function dish(f){ const pl = el("div",{class:"plate"}); pic(pl,f.img,f.n,"plato"); return el("div",{class:"dish"},[pl,el("div",{},[el("h3",{text:f.n}),el("p",{text:f.d})])]); }
+function dish(f){ if(f.feat){ const pl = el("div",{class:"plate"}); pic(pl,f.img,f.n,"plato"); return el("div",{class:"dish featured"},[pl,el("div",{},[el("span",{class:"tag",text:"★ Dulce emblemático de Zipaquirá"}),el("h3",{text:f.n}),el("p",{text:f.d})])]); } const pl = el("div",{class:"plate"}); const body = el("div",{},[el("h3",{text:f.n}),el("p",{text:f.d})]);
+  pic(pl,f.img,f.n,"plato",()=>{ if(f.credit) body.append(el("p",{class:"credit",style:"margin-top:4px",html:`Foto: <a href="${f.credit}" target="_blank" rel="noopener">Wikimedia Commons</a>`})); });
+  return el("div",{class:"dish"},[pl,body]); }
 $("#food").append(...FOOD.map(dish));
 $("#sweets").append(...SWEETS.map(dish));
 $("#foodPlaces").append(...FOODPLACES.map(f=>{
@@ -1014,6 +1019,11 @@ const menuBtn=$("#menuBtn"), nav=$("#nav");
 menuBtn.addEventListener("click",()=>{ const o=nav.classList.toggle("open"); menuBtn.setAttribute("aria-expanded",o); });
 nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{ nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); }));
 document.addEventListener("keydown",e=>{ if(e.key==="Escape"){ nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); } });
+
+// Créditos
+(function(){ const ul=$("#credits"); const seen=new Set();
+  [...PLACES.map(p=>[p.n,p.credit]),...FOOD.map(f=>[f.n,f.credit])].forEach(([n,c])=>{ if(c&&!seen.has(c)){ seen.add(c); ul.append(el("li",{html:`${n}: <a href="${c}" target="_blank" rel="noopener">página del archivo (autor y licencia)</a>`})); } });
+})();
 </script>
 </body>
 </html>
