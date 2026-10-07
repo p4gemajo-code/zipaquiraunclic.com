@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Zipaquirá Turística | Raíces, tierra y tradición</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Planea tu visita a Zipaquirá: lugares turísticos, historia y cultura, gastronomía, actividades, agenda de eventos, precios, horarios y servicios locales.">
+<meta name="theme-color" content="#1b2b4e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%231b2b4e'/%3E%3Ccircle cx='50' cy='50' r='19' fill='none' stroke='%23c9a45c' stroke-width='3'/%3E%3Ccircle cx='50' cy='50' r='5' fill='%23c9a45c'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1b2b4e; --navy-2:#13203c; --blue:#2a5bd7; --blue-2:#4a86f0; --sky:#bcd8ff; --mist:#eef4ff; --white:#ffffff;
+  --gold:#c9a45c; --ink:#16223d; --muted:#4d5b7a; --line:#d7e2f7;
+  --violet:#6f5bd6; --teal:#1f9d9a; --coral:#e8694f;
+  --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --text:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --header-h:68px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 12px);-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--text);font-size:1rem;line-height:1.6;color:var(--ink);background:var(--white)}
+img,svg{max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);line-height:1.1;margin:0;letter-spacing:-.01em}
+p{margin:0}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;background:var(--gold);color:var(--navy);padding:8px 14px;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
+
+/* ---------- Header ---------- */
+.site-header{position:sticky;top:0;z-index:50;height:var(--header-h);background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.site-header .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy)}
+.brand svg{width:42px;height:42px;flex:none}
+.brand-name{font-size:1.45rem;font-weight:300;letter-spacing:.01em;line-height:1}
+.menu-btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--white);color:var(--navy);font:500 .95rem var(--text);padding:10px 14px;border-radius:999px;cursor:pointer}
+.menu-btn svg{width:18px;height:18px}
+.nav{position:absolute;left:0;right:0;top:var(--header-h);background:var(--white);border-bottom:1px solid var(--line);padding:10px 20px 18px;display:none;max-height:calc(100vh - var(--header-h));overflow-y:auto}
+.nav.open{display:block}
+.nav a{display:block;padding:12px 4px;text-decoration:none;font-weight:500;color:var(--navy);border-bottom:1px solid var(--mist)}
+.nav a:hover{color:var(--blue)}
+@media (min-width:1080px){
+  .menu-btn{display:none}
+  .nav{position:static;display:flex;gap:2px;padding:0;border:0;max-height:none;overflow:visible;background:none}
+  .nav a{padding:8px 10px;border:0;font-size:.9rem;border-radius:999px}
+  .nav a:hover{background:var(--mist)}
+}
+
+/* ---------- Buttons & chips ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 1rem var(--text);text-decoration:none;padding:14px 22px;border-radius:999px;border:2px solid transparent;cursor:pointer;transition:transform .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:#d8b672}
+.btn-line{border-color:rgba(255,255,255,.55);color:var(--white)}
+.btn-line:hover{background:rgba(255,255,255,.12)}
+.btn-blue{background:var(--blue);color:var(--white)}
+.btn-blue:hover{background:#1f49b3}
+.btn-white{background:var(--white);color:var(--navy)}
+.chip{display:inline-block;font-size:.78rem;font-weight:600;padding:4px 11px;border-radius:999px;background:var(--mist);color:var(--blue)}
+.chip[data-t="Cultura"]{background:#ece8ff;color:#4b3bb0}
+.chip[data-t="Experiencia"]{background:#d9f3f2;color:#116b69}
+.chip[data-t="Cerca"]{background:#ffe6df;color:#a8381f}
+.chip[data-t="Patrimonio"]{background:#dfe9ff;color:#1f49b3}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;background:
+  radial-gradient(900px 500px at 85% 10%,rgba(74,134,240,.55),transparent 60%),
+  linear-gradient(160deg,var(--navy-2),var(--navy) 55%,#24408a);
+  color:var(--white);padding:56px 0 120px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;opacity:.9;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cpath d='M45 34l3 8-3 8-3-8z' fill='%23c9a45c' fill-opacity='.22'/%3E%3C/svg%3E")}
+.hero .wrap{position:relative;display:grid;gap:36px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,7.5vw,4.6rem);font-weight:800}
+.hero p.lead{margin-top:18px;font-size:1.125rem;color:#d6e4ff;max-width:34rem;font-weight:300}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.arches{display:flex;align-items:flex-end;gap:10px;height:230px}
+.arch{position:relative;overflow:hidden;border-radius:999px 999px 16px 16px;flex:1;box-shadow:0 18px 40px rgba(0,0,0,.28);border:3px solid rgba(255,255,255,.9)}
+.arch svg{display:block;width:100%;height:100%}
+.arch:nth-child(1){height:72%}.arch:nth-child(2){height:100%}.arch:nth-child(3){height:84%}
+@media (prefers-reduced-motion:no-preference){
+  .arch{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+  .arch:nth-child(2){animation-delay:.12s}.arch:nth-child(3){animation-delay:.24s}
+  @keyframes rise{from{transform:translateY(60px);opacity:0}to{transform:none;opacity:1}}
+}
+@media (min-width:900px){
+  .hero{padding:80px 0 140px}
+  .hero .wrap{grid-template-columns:1.1fr .9fr}
+  .arches{height:420px;gap:14px}
+}
+
+/* ---------- Quick access ---------- */
+.quick{margin-top:-64px;position:relative;z-index:2}
+.quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.quick a{display:flex;flex-direction:column;gap:10px;text-decoration:none;background:var(--white);border-radius:18px;padding:18px;box-shadow:0 10px 30px rgba(27,43,78,.16);border:1px solid var(--line);transition:transform .15s ease}
+.quick a:hover{transform:translateY(-3px)}
+.quick .ico{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:var(--mist);color:var(--blue)}
+.quick .ico svg{width:24px;height:24px}
+.quick b{font-family:var(--display);font-size:1.05rem;color:var(--navy)}
+.quick span.s{font-size:.88rem;color:var(--muted);line-height:1.35}
+.quick a:nth-child(2) .ico{background:#fff3d6;color:#9a7117}
+.quick a:nth-child(3) .ico{background:#d9f3f2;color:#116b69}
+.quick a:nth-child(4) .ico{background:#ffe6df;color:#a8381f}
+@media (min-width:800px){.quick-grid{grid-template-columns:repeat(4,1fr);gap:16px}}
+
+/* ---------- Sections ---------- */
+section.block{padding:84px 0}
+.s-head{max-width:40rem;margin-bottom:34px}
+.s-head h2{font-size:clamp(1.9rem,5vw,2.8rem);font-weight:800;color:var(--navy)}
+.s-head p{margin-top:12px;color:var(--muted);font-size:1.05rem}
+.bg-mist{background:var(--mist)}
+.bg-navy{background:var(--navy);color:var(--white)}
+.bg-navy .s-head h2{color:var(--white)}
+.bg-navy .s-head p{color:#c5d6f7}
+.bg-blue{background:linear-gradient(150deg,#1f49b3,var(--blue) 60%,#3f7be8);color:var(--white)}
+.bg-blue .s-head h2{color:var(--white)}
+.bg-blue .s-head p{color:#dce8ff}
+
+/* Filters */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.filters button{font:500 .92rem var(--text);padding:9px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--white);color:var(--navy);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--navy);color:var(--white);border-color:var(--navy)}
+
+/* Place cards */
+.cards{display:grid;gap:22px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+.card{display:flex;flex-direction:column;gap:12px}
+.card .arch{flex:none;height:auto;aspect-ratio:5/6;box-shadow:0 10px 26px rgba(27,43,78,.16);border:0}
+@media (prefers-reduced-motion:no-preference){.card .arch{animation:none}}
+.card h3{font-size:1.3rem;color:var(--navy)}
+.card p{color:var(--muted);font-size:.97rem}
+.card details{border-top:1px solid var(--line);padding-top:10px}
+.card summary{cursor:pointer;font-weight:600;color:var(--blue);font-size:.95rem;list-style:none}
+.card summary::-webkit-details-marker{display:none}
+.card summary::before{content:"+";display:inline-block;width:20px;font-weight:700}
+.card details[open] summary::before{content:"–"}
+.card details p{margin-top:8px;font-size:.95rem}
+
+/* History */
+.history{display:grid;gap:40px}
+.timeline{position:relative;display:grid;gap:14px;padding-left:26px;border-left:2px solid rgba(201,164,92,.55)}
+.era{position:relative;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:16px 18px}
+.era::before{content:"";position:absolute;left:-34px;top:22px;width:14px;height:14px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px var(--navy)}
+.era summary{cursor:pointer;list-style:none;display:flex;flex-direction:column;gap:2px}
+.era summary::-webkit-details-marker{display:none}
+.era .yr{color:var(--gold);font-weight:600;font-size:.9rem}
+.era .ttl{font-family:var(--display);font-size:1.25rem;font-weight:700}
+.era .sum{color:#c5d6f7;font-size:.97rem}
+.era .more{margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.14);color:#e4edff;font-size:.97rem}
+.pillars{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:46px}
+.pillar{background:linear-gradient(160deg,rgba(74,134,240,.35),rgba(255,255,255,.06));border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:22px}
+.pillar h3{font-size:1.15rem;margin-bottom:6px}
+.pillar p{color:#d6e4ff;font-size:.95rem}
+@media (min-width:960px){.history{grid-template-columns:.8fr 1.2fr;align-items:start}.history .s-head{position:sticky;top:96px}}
+
+/* Food */
+.food{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.dish{display:flex;gap:16px;align-items:center;background:var(--white);border-radius:24px;padding:16px;border:1px solid var(--line)}
+.dish .plate{flex:none;width:104px;height:104px;border-radius:50%;overflow:hidden;border:3px solid var(--sky)}
+.dish .plate svg{display:block;width:100%;height:100%}
+.dish h3{font-size:1.15rem;color:var(--navy)}
+.dish p{font-size:.93rem;color:var(--muted);margin-top:4px}
+
+/* Activities */
+.acts{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.act{border:1.5px solid var(--line);border-radius:22px;padding:22px;background:var(--white)}
+.act .ico{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:var(--white);margin-bottom:14px}
+.act .ico svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.act h3{font-size:1.15rem;color:var(--navy);margin-bottom:6px}
+.act p{font-size:.95rem;color:var(--muted)}
+
+/* Events */
+.events{display:grid;gap:14px}
+.event{display:grid;gap:12px;background:var(--white);border-radius:20px;padding:20px;border:1px solid var(--line)}
+.event h3{font-size:1.2rem;color:var(--navy)}
+.event p{color:var(--muted);font-size:.96rem}
+.event .when{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.88rem;color:#9a7117;background:#fff3d6;padding:5px 12px;border-radius:999px;justify-self:start}
+@media (min-width:760px){.event{grid-template-columns:1fr auto;align-items:center}}
+
+/* Table */
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:20px}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:.96rem}
+th,td{text-align:left;padding:14px 16px;vertical-align:top;border-bottom:1px solid var(--line)}
+thead th{background:var(--navy);color:var(--white);font-weight:600}
+tbody tr:last-child td{border-bottom:0}
+tbody th{font-weight:600;color:var(--navy)}
+.free{color:#116b69;font-weight:600}
+.tbc{color:var(--muted)}
+.note{margin-top:16px;color:var(--muted);font-size:.93rem}
+
+/* Stay */
+.stay{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.stay-card{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);border-radius:24px;padding:26px;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.stay-card h3{font-size:1.5rem}
+.stay-card p{color:#e4edff}
+.stay-card.join{background:var(--white);color:var(--navy)}
+.stay-card.join p{color:var(--muted)}
+
+/* Reviews & forms */
+.two{display:grid;gap:26px}
+@media (min-width:900px){.two{grid-template-columns:1fr 1fr;align-items:start}}
+.panel{background:var(--white);border-radius:24px;padding:24px;border:1px solid var(--line)}
+.bg-navy .panel{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18)}
+label{display:block;font-weight:600;font-size:.92rem;margin-bottom:6px}
+.field{margin-bottom:16px}
+input[type=text],input[type=email],select,textarea{width:100%;font:400 1rem var(--text);padding:12px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--white);color:var(--ink)}
+textarea{min-height:110px;resize:vertical}
+.bg-navy label{color:#e4edff}
+.stars{display:flex;gap:4px}
+.stars button{background:none;border:0;padding:2px;font-size:1.9rem;line-height:1;cursor:pointer;color:#c4d0ea}
+.stars button.on{color:var(--gold)}
+.review{padding:16px 0;border-bottom:1px solid var(--line)}
+.review:last-child{border-bottom:0}
+.review .top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.review b{color:var(--navy)}
+.review .st{color:var(--gold);letter-spacing:2px}
+.review .pl{font-size:.85rem;color:var(--blue);font-weight:600}
+.review p{margin-top:6px;color:var(--muted)}
+.empty{color:var(--muted);padding:8px 0}
+.msg{margin-top:12px;font-weight:600;color:#116b69}
+.msg.err{color:#b3321a}
+.bg-navy .msg{color:#8fe3df}
+
+/* Footer */
+footer{background:var(--navy-2);color:#c5d6f7;padding:48px 0 30px}
+footer .top{display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;align-items:center}
+footer .brand{color:var(--white)}
+footer .tag{margin-top:10px;font-size:.9rem;letter-spacing:.18em;color:var(--gold)}
+footer nav{display:flex;flex-wrap:wrap;gap:6px 18px;max-width:420px}
+footer nav a{text-decoration:none;font-size:.93rem}
+footer nav a:hover{color:var(--white)}
+footer .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);font-size:.85rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="48" fill="#1b2b4e"/>
+    <circle cx="50" cy="50" r="45" fill="none" stroke="#c9a45c" stroke-width="1"/>
+    <circle cx="50" cy="50" r="19" fill="none" stroke="#c9a45c" stroke-width="1.4"/>
+    <circle cx="50" cy="50" r="12" fill="none" stroke="#c9a45c" stroke-width="1.2"/>
+    <circle cx="50" cy="50" r="3.4" fill="#c9a45c"/>
+    <g fill="#c9a45c">
+      <path d="M50 11l3.6 9-3.6 9-3.6-9z"/>
+      <path d="M50 89l3.6-9-3.6-9-3.6 9z"/>
+      <path d="M11 50l9-3.6 9 3.6-9 3.6z"/>
+      <path d="M89 50l-9-3.6-9 3.6 9 3.6z"/>
+    </g>
+    <g stroke="#c9a45c" stroke-width="1.3" stroke-linecap="round">
+      <path d="M25 25l6 6"/><path d="M75 25l-6 6"/><path d="M25 75l6-6"/><path d="M75 75l-6-6"/>
+    </g>
+  </symbol>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Zipaquirá, ir al inicio">
+      <svg aria-hidden="true"><use href="#logo"/></svg>
+      <span class="brand-name">Zipaquirá</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      Menú
+    </button>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#lugares">Lugares</a>
+      <a href="#historia">Historia y cultura</a>
+      <a href="#gastronomia">Gastronomía</a>
+      <a href="#actividades">Actividades</a>
+      <a href="#agenda">Agenda</a>
+      <a href="#precios">Precios y horarios</a>
+      <a href="#hoteles">Hoteles y restaurantes</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+<!-- INICIO -->
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div>
+      <h1>Zipaquirá tiene más de una historia</h1>
+      <p class="lead">Patrimonio, cultura, sabores y escapadas de la Sabana. Todo lo que necesitas para planear tu visita, en un solo lugar.</p>
+      <div class="actions">
+        <a class="btn btn-gold" href="#lugares">Explorar lugares</a>
+        <a class="btn btn-line" href="#agenda">Ver agenda y eventos</a>
+      </div>
+    </div>
+    <div class="arches" id="heroArches" aria-hidden="true"></div>
+  </div>
+</section>
+
+<div class="quick">
+  <div class="wrap quick-grid">
+    <a href="#lugares"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Qué visitar</b><span class="s">Lugares para todos los gustos</span></a>
+    <a href="#precios"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><b>Precios y horarios</b><span class="s">Organiza tu recorrido</span></a>
+    <a href="#agenda"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M4 10h16M9 3v4M15 3v4"/></svg></span><b>Agenda cultural</b><span class="s">Festivales y eventos</span></a>
+    <a href="#hoteles"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20V8l9-5 9 5v12M9 20v-6h6v6"/></svg></span><b>Dónde quedarte</b><span class="s">Hoteles y restaurantes</span></a>
+  </div>
+</div>
+
+<!-- LUGARES -->
+<section class="block" id="lugares">
+  <div class="wrap">
+    <div class="s-head">
+      <h2>Lugares turísticos</h2>
+      <p>Plazas, museos, templos y paseos para recorrer a tu ritmo. Toca cada tarjeta para ampliar la información.</p>
+    </div>
+    <div class="filters" id="filters" role="group" aria-label="Filtrar lugares"></div>
+    <div class="cards" id="placeCards"></div>
+  </div>
+</section>
+
+<!-- HISTORIA -->
+<section class="block bg-navy" id="historia">
+  <div class="wrap">
+    <div class="history">
+      <div class="s-head">
+        <h2>Historia y cultura</h2>
+        <p>Zipaquirá guarda siglos de memoria: pueblos ancestrales, un pasado colonial, un papel en la historia del país y una vida cultural que sigue creciendo. Abre cada etapa para leer más.</p>
+      </div>
+      <div class="timeline" id="timeline"></div>
+    </div>
+    <div class="pillars" id="pillars"></div>
+  </div>
+</section>
+
+<!-- GASTRONOMIA -->
+<section class="block bg-mist" id="gastronomia">
+  <div class="wrap">
+    <div class="s-head">
+      <h2>Gastronomía</h2>
+      <p>La mesa de Zipaquirá es sabana, tradición y sazón de casa.</p>
+    </div>
+    <div class="food" id="food"></div>
+  </div>
+</section>
+
+<!-- ACTIVIDADES -->
+<section class="block" id="actividades">
+  <div class="wrap">
+    <div class="s-head">
+      <h2>Actividades</h2>
+      <p>Ideas para armar tu día, sea que vengas en familia, en pareja o con amigos.</p>
+    </div>
+    <div class="acts" id="acts"></div>
+  </div>
+</section>
+
+<!-- AGENDA -->
+<section class="block bg-mist" id="agenda">
+  <div class="wrap">
+    <div class="s-head">
+      <h2>Agenda cultural y eventos</h2>
+      <p>Festivales, conciertos y celebraciones que llenan de vida al municipio.</p>
+    </div>
+    <div class="events" id="events"></div>
+  </div>
+</section>
+
+<!-- PRECIOS -->
+<section class="block" id="precios">
+  <div class="wrap">
+    <div class="s-head">
+      <h2>Precios y horarios</h2>
+      <p>Una guía rápida para saber cuánto cuesta y cuándo ir.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th scope="col">Lugar</th><th scope="col">Ingreso</th><th scope="col">Horario</th></tr></thead>
+        <tbody id="priceRows"></tbody>
+      </table>
+    </div>
+    <p class="note">Horarios y tarifas pueden cambiar. Confírmalos con cada sitio antes de tu visita.</p>
+  </div>
+</section>
+
+<!-- HOTELES Y RESTAURANTES -->
+<section class="block bg-blue" id="hoteles">
+  <div class="wrap">
+    <div class="s-head">
+      <h2>Hoteles y restaurantes</h2>
+      <p>Encuentra dónde dormir y comer cerca del centro histórico.</p>
+    </div>
+    <div class="stay">
+      <div class="stay-card">
+        <h3>Dónde quedarte</h3>
+        <p>Hoteles y hospedajes en Zipaquirá, con ubicación, fotos y reseñas en el mapa.</p>
+        <a class="btn btn-white" href="https://www.google.com/maps/search/hoteles+en+Zipaquir%C3%A1" target="_blank" rel="noopener">Ver hoteles en el mapa</a>
+      </div>
+      <div class="stay-card">
+        <h3>Dónde comer</h3>
+        <p>Restaurantes y cocinas locales para probar la sobrebarriga y otros sabores de la región.</p>
+        <a class="btn btn-white" href="https://www.google.com/maps/search/restaurantes+en+Zipaquir%C3%A1" target="_blank" rel="noopener">Ver restaurantes en el mapa</a>
+      </div>
+      <div class="stay-card join">
+        <h3>¿Tienes un negocio local?</h3>
+        <p>Cuéntanos sobre tu hotel, restaurante o servicio turístico para incluirlo en la página.</p>
+        <a class="btn btn-blue" href="#contacto" data-subject="Quiero incluir mi negocio">Escríbenos</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPINIONES -->
+<section class="block bg-mist" id="opiniones">
+  <div class="wrap">
+    <div class="s-head">
+      <h2>Opiniones de visitantes</h2>
+      <p>¿Ya visitaste Zipaquirá? Tu experiencia ayuda a otros viajeros a planear mejor.</p>
+    </div>
+    <div class="two">
+      <form class="panel" id="reviewForm" novalidate>
+        <div class="field"><label for="rName">Tu nombre</label><input type="text" id="rName" maxlength="40" autocomplete="name"></div>
+        <div class="field"><label for="rPlace">Lugar que visitaste</label><select id="rPlace"></select></div>
+        <div class="field"><label id="rateLbl">Calificación</label><div class="stars" id="stars" role="group" aria-labelledby="rateLbl"></div></div>
+        <div class="field"><label for="rText">Tu opinión</label><textarea id="rText" maxlength="400"></textarea></div>
+        <button class="btn btn-blue" type="submit">Publicar opinión</button>
+        <p class="msg" id="rMsg" role="status"></p>
+      </form>
+      <div class="panel"><div id="reviewList" aria-live="polite"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="block bg-navy" id="contacto">
+  <div class="wrap">
+    <div class="two">
+      <div class="s-head" style="margin-bottom:0">
+        <h2>Contacto</h2>
+        <p>Escríbenos para resolver dudas, sugerir un lugar o sumar tu negocio. Este proyecto nace para fomentar el turismo y fortalecer la identidad turística de Zipaquirá.</p>
+      </div>
+      <form class="panel" id="contactForm" novalidate>
+        <div class="field"><label for="cName">Nombre</label><input type="text" id="cName" autocomplete="name"></div>
+        <div class="field"><label for="cMail">Correo</label><input type="email" id="cMail" autocomplete="email"></div>
+        <div class="field"><label for="cSubj">Asunto</label><input type="text" id="cSubj" value="Consulta turística"></div>
+        <div class="field"><label for="cMsg">Mensaje</label><textarea id="cMsg"></textarea></div>
+        <button class="btn btn-gold" type="submit">Enviar mensaje</button>
+        <p class="msg" id="cInfo" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <a class="brand" href="#inicio" aria-label="Ir al inicio"><svg aria-hidden="true"><use href="#logo"/></svg><span class="brand-name">Zipaquirá</span></a>
+        <p class="tag">RAÍCES • TIERRA • TRADICIÓN</p>
+      </div>
+      <nav aria-label="Pie de página">
+        <a href="#lugares">Lugares</a><a href="#historia">Historia y cultura</a><a href="#gastronomia">Gastronomía</a><a href="#actividades">Actividades</a><a href="#agenda">Agenda</a><a href="#precios">Precios y horarios</a><a href="#hoteles">Hoteles y restaurantes</a><a href="#opiniones">Opiniones</a><a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+    <p class="legal">Proyecto para el fomento del turismo en Zipaquirá, Cundinamarca. Información sujeta a cambios; confirma datos con cada sitio antes de viajar.</p>
+  </div>
+</footer>
+
+<script>
+/* ============ CONFIGURACIÓN EDITABLE ============ */
+const CONTACT_EMAIL = "tu-correo@ejemplo.com"; // Cambia por el correo real del proyecto
+
+/* ============ ILUSTRACIONES (SVG) ============ */
+let uid = 0;
+function scene(type){
+  const id = "g" + (++uid);
+  const palettes = {
+    plaza:["#bcd8ff","#eef4ff"], museo:["#a9c9ff","#e3eeff"], arqueo:["#1b2b4e","#2a5bd7"],
+    cultura:["#6f5bd6","#2a5bd7"], iglesia:["#8ec1ff","#e9f2ff"], tren:["#9be0dc","#e6f7f6"],
+    montana:["#ffc9b8","#bcd8ff"], plato:["#dfe9ff","#bcd8ff"]
+  };
+  const [c1,c2] = palettes[type];
+  const head = `<svg viewBox="0 0 200 240" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><defs><linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient></defs><rect width="200" height="240" fill="url(#${id})"/>`;
+  const sun = `<circle cx="158" cy="62" r="17" fill="#f7d98b"/>`;
+  const S = {
+    plaza: sun + `<rect y="188" width="200" height="52" fill="#dfe9fb"/>
+      <path d="M88 84l16-24 16 24z" fill="#1b2b4e" transform="translate(-4 0)"/>
+      <rect x="88" y="84" width="24" height="52" fill="#fff"/><path d="M94 108v-8a6 6 0 0 1 12 0v8z" fill="#2a5bd7"/>
+      <path d="M14 136h172l-12-20H26z" fill="#e8694f"/><rect x="20" y="136" width="160" height="52" fill="#fff"/>
+      ${[0,1,2,3].map(i=>`<path d="M${32+i*38} 188v-26a12 12 0 0 1 24 0v26z" fill="#2a5bd7"/>`).join("")}
+      <circle cx="100" cy="210" r="14" fill="#8ec1ff"/><circle cx="100" cy="210" r="6" fill="#fff"/>`,
+    museo: sun + `<rect y="196" width="200" height="44" fill="#d3e3fb"/>
+      <path d="M24 108l76-36 76 36z" fill="#1b2b4e"/>
+      ${[0,1,2,3,4].map(i=>`<rect x="${34+i*30}" y="112" width="12" height="64" fill="#fff"/>`).join("")}
+      <rect x="20" y="176" width="160" height="12" fill="#fff"/><rect x="12" y="188" width="176" height="10" fill="#8ec1ff"/>
+      <circle cx="100" cy="98" r="7" fill="#c9a45c"/>`,
+    arqueo: `<g fill="none" stroke="#4a86f0" stroke-opacity=".5" stroke-width="2"><circle cx="100" cy="130" r="86"/><circle cx="100" cy="130" r="64"/></g>
+      <path d="M70 80c0-14 60-14 60 0 0 10 14 18 14 46 0 32-24 48-44 48s-44-16-44-48c0-28 14-36 14-46z" fill="#d4a850"/>
+      <ellipse cx="100" cy="82" rx="30" ry="7" fill="#b88a30"/>
+      <path d="M62 118h76M60 136h80" stroke="#1b2b4e" stroke-width="3"/>
+      <g fill="#1b2b4e"><path d="M100 144l8 8-8 8-8-8z"/><path d="M78 148l5 5-5 5-5-5z"/><path d="M122 148l5 5-5 5-5-5z"/></g>
+      <rect y="196" width="200" height="44" fill="#13203c"/>`,
+    cultura: `<circle cx="100" cy="124" r="80" fill="#fff" fill-opacity=".14"/>
+      <circle cx="78" cy="156" r="13" fill="#fff"/><circle cx="132" cy="144" r="13" fill="#fff"/>
+      <path d="M91 156V76l54-14v82" fill="none" stroke="#fff" stroke-width="7"/><path d="M91 94l54-14" stroke="#fff" stroke-width="10"/>
+      <circle cx="40" cy="60" r="5" fill="#f7d98b"/><circle cx="168" cy="190" r="6" fill="#f7d98b"/><circle cx="36" cy="198" r="4" fill="#fff"/>`,
+    iglesia: sun + `<rect y="190" width="200" height="50" fill="#dce9fb"/>
+      <rect x="54" y="116" width="92" height="74" fill="#fff"/><rect x="82" y="64" width="36" height="52" fill="#fff"/>
+      <path d="M78 64l22-34 22 34z" fill="#2a5bd7"/><path d="M100 14v18M93 21h14" stroke="#c9a45c" stroke-width="3" stroke-linecap="round"/>
+      <path d="M92 100v-8a8 8 0 0 1 16 0v8z" fill="#1b2b4e"/><path d="M88 190v-30a12 12 0 0 1 24 0v30z" fill="#1b2b4e"/>
+      <path d="M48 116l52-18 52 18z" fill="#e8694f"/>
+      <g fill="#8ec1ff"><rect x="62" y="136" width="14" height="22" rx="7"/><rect x="124" y="136" width="14" height="22" rx="7"/></g>`,
+    tren: `<path d="M0 170c40-50 80-46 110-18 30 26 60 8 90-22v110H0z" fill="#4fbab6"/>
+      <path d="M0 196c50-30 100-20 200-6v50H0z" fill="#1f9d9a"/>
+      <circle cx="40" cy="60" r="16" fill="#f7d98b"/>
+      <rect x="20" y="130" width="120" height="44" rx="8" fill="#2a5bd7"/><rect x="112" y="108" width="52" height="66" rx="8" fill="#1b2b4e"/>
+      <rect x="120" y="118" width="28" height="22" rx="4" fill="#bcd8ff"/>
+      ${[0,1,2].map(i=>`<rect x="${30+i*28}" y="140" width="20" height="16" rx="3" fill="#fff"/>`).join("")}
+      <rect x="40" y="112" width="18" height="18" fill="#13203c"/>
+      <circle cx="46" cy="102" r="9" fill="#fff" fill-opacity=".85"/><circle cx="62" cy="88" r="12" fill="#fff" fill-opacity=".7"/>
+      <g fill="#13203c"><circle cx="48" cy="180" r="10"/><circle cx="90" cy="180" r="10"/><circle cx="136" cy="180" r="10"/></g>
+      <path d="M0 192h200" stroke="#13203c" stroke-width="3"/>`,
+    montana: `<circle cx="100" cy="130" r="38" fill="#f7d98b"/>
+      <path d="M0 170l52-70 38 48 30-38 80 94v36H0z" fill="#2a5bd7"/>
+      <path d="M52 100l-14 19 14-7 10 9z" fill="#fff"/>
+      <path d="M0 196l70-34 60 22 70-26v82H0z" fill="#1b2b4e"/>
+      <ellipse cx="110" cy="214" rx="64" ry="14" fill="#8ec1ff"/><path d="M70 214h80" stroke="#fff" stroke-opacity=".6" stroke-width="2"/>`,
+    plato: `<circle cx="100" cy="120" r="94" fill="#fff"/><circle cx="100" cy="120" r="70" fill="none" stroke="#bcd8ff" stroke-width="4"/>
+      <path d="M50 108c12-26 52-30 78-8 12 10 20 24 14 38-28 18-70 14-92-6z" fill="#9a5a36"/>
+      <path d="M62 112c18-12 40-12 60 0M60 128c24-10 50-8 72 2" stroke="#6e3a1f" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <g fill="#f1c95d"><circle cx="64" cy="164" r="14"/><circle cx="96" cy="172" r="13"/><circle cx="130" cy="166" r="14"/></g>
+      <g fill="#fff" fill-opacity=".5"><circle cx="60" cy="160" r="4"/><circle cx="92" cy="168" r="4"/><circle cx="126" cy="162" r="4"/></g>`
+  };
+  return head + S[type] + "</svg>";
+}
+
+/* ============ DATOS ============ */
+const PLACES = [
+  {s:"plaza", t:"Patrimonio", n:"Plaza de los Comuneros", d:"El punto de encuentro del centro histórico, rodeado de arquitectura colonial.", m:"Desde aquí empieza el recorrido a pie por el casco antiguo: el templo diocesano, calles empedradas y comercio local. Es un buen lugar para orientarte antes de visitar museos y casonas cercanas."},
+  {s:"museo", t:"Cultura", n:"Casa Museo Quevedo Zornoza", d:"Una casa del centro histórico para conocer a la familia Quevedo y su aporte a la música y la literatura colombianas.", m:"Permite entender cómo se vivía en la Zipaquirá de antes y por qué esta familia es parte de la identidad cultural del municipio. Consulta el horario antes de ir."},
+  {s:"arqueo", t:"Patrimonio", n:"Museo Arqueológico", d:"Objetos y vestigios de los pueblos muiscas que habitaron la región.", m:"Una parada ideal para conectar el paisaje de hoy con la historia ancestral de la Sabana de Bogotá."},
+  {s:"cultura", t:"Cultura", n:"Casa de la Cultura Arturo Wagner", d:"Centro de formación artística con clases de canto y baile.", m:"Es el lugar para acercarte a la vida cultural local. Pregunta por presentaciones y muestras abiertas al público."},
+  {s:"iglesia", t:"Patrimonio", n:"Iglesias coloniales", d:"Cerca de diez templos de estilo colonial abiertos al público.", m:"Recórrelas con calma: cada una cuenta algo distinto sobre la fe, el arte y el desarrollo urbano del municipio. Respeta los horarios de culto."},
+  {s:"tren", t:"Experiencia", n:"Tren turístico de la Sabana", d:"Llega desde Bogotá en tren y empieza el paseo desde la estación.", m:"El tren sale de la Estación de la Sabana, en Bogotá, y recorre varios puntos de la ciudad hasta llegar a Zipaquirá. Consulta días, horarios y tarifas con el operador."},
+  {s:"montana", t:"Cerca", n:"Escapadas cercanas: Suesca", d:"Laguna, caminatas y escalada a poca distancia.", m:"Suesca, Tabio y Guatavita completan un plan de varios días por los pueblos de la Sabana."}
+];
+
+const ERAS = [
+  {y:"Antes del siglo XVI", t:"Territorio muisca", s:"Pueblos ancestrales que habitaron y comerciaron en la Sabana.", m:"La región fue territorio muisca. Sus habitantes intercambiaban productos con otros pueblos y dejaron un legado que hoy se estudia y se exhibe en el Museo Arqueológico."},
+  {y:"Época colonial", t:"Villa de Zipaquirá", s:"El pueblo se consolida y levanta sus primeros templos.", m:"Durante la Colonia la población se organiza como villa. De esa etapa heredó su trazado urbano, sus plazas y las iglesias de estilo colonial que siguen en pie."},
+  {y:"1781", t:"Capitulaciones de Zipaquirá", s:"Un capítulo clave de la Revuelta de los Comuneros.", m:"En el marco de la Revuelta de los Comuneros se firmaron las llamadas Capitulaciones de Zipaquirá, un episodio que ubica al municipio en la historia política del país. De ahí el nombre de su plaza principal."},
+  {y:"Hoy", t:"Ciudad cultural", s:"Museos, música, festivales y vida de pueblo.", m:"Casas de cultura, museos, una agenda de festivales y la huella de familias como los Quevedo mantienen viva la identidad local, abierta a quienes visitan."}
+];
+
+const PILLARS = [
+  {t:"Patrimonio construido", d:"Plazas, casonas y templos de estilo colonial en el centro histórico."},
+  {t:"Música y letras", d:"Un legado artístico que se vive en casas de cultura y museos."},
+  {t:"Fiestas y encuentros", d:"Festivales y celebraciones que reúnen a vecinos y visitantes."},
+  {t:"Cocina de la Sabana", d:"Platos tradicionales que cuentan cómo se come en la región."}
+];
+
+const FOOD = [
+  {n:"Sobrebarriga al horno", d:"El plato típico de la región, cocinado despacio hasta quedar tierno."},
+  {n:"Sobrebarriga en salsa criolla", d:"La misma tradición, con hogao casero y mucho sabor."},
+  {n:"Papas salmueras", d:"El acompañamiento clásico: papas cocidas en salmuera, según la receta tradicional."}
+];
+
+const ICONS = {
+  walk:'<circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/>',
+  museum:'<path d="M3 21h18M5 18V10M9.5 18V10M14.5 18V10M19 18V10M12 3 3 8h18z"/>',
+  music:'<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>',
+  train:'<rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M8 21l2-4M16 21l-2-4"/>',
+  food:'<path d="M5 3v7a2 2 0 0 0 4 0V3M7 3v18M17 3c-2 2-3 4-3 8h6V3zM17 11v10"/>',
+  mountain:'<path d="m3 20 6-11 4 6 3-4 5 9z"/>'
+};
+const ACTS = [
+  {i:"walk", c:"#2a5bd7", n:"Recorrido a pie por el centro", d:"Camina entre plazas, calles empedradas y fachadas coloniales."},
+  {i:"museum", c:"#6f5bd6", n:"Ruta de museos", d:"Combina la Casa Museo Quevedo Zornoza y el Museo Arqueológico en una mañana."},
+  {i:"music", c:"#e8694f", n:"Cultura en vivo", d:"Consulta la programación de la Casa de la Cultura y de los festivales."},
+  {i:"train", c:"#1f9d9a", n:"Viaje en tren", d:"Haz del trayecto desde Bogotá parte del paseo."},
+  {i:"food", c:"#c9a45c", n:"Almuerzo tradicional", d:"Prueba la sobrebarriga con papas salmueras en un restaurante local."},
+  {i:"mountain", c:"#1b2b4e", n:"Escapada a la naturaleza", d:"Suma un día de paisaje y aire libre en pueblos vecinos como Suesca."}
+];
+
+const EVENTS = [
+  {t:"Cultura", n:"Festival Villa de la Sal", d:"Música, tradición y ambiente de fiesta en el municipio."},
+  {t:"Cultura", n:"Aniversario de la ciudad", d:"Presentaciones artísticas, espectáculos folclóricos, juegos tradicionales y conciertos."},
+  {t:"Cultura", n:"Programación de la Casa de la Cultura", d:"Muestras, presentaciones y actividades artísticas durante el año."}
+];
+
+const PRICES = [
+  {n:"Plaza de los Comuneros", p:"Libre", h:"Espacio público", free:true},
+  {n:"Iglesias coloniales", p:"Libre", h:"Según cada parroquia; respeta los horarios de culto", free:true},
+  {n:"Casa Museo Quevedo Zornoza", p:"Por confirmar", h:"Por confirmar"},
+  {n:"Museo Arqueológico", p:"Por confirmar", h:"Por confirmar"},
+  {n:"Casa de la Cultura Arturo Wagner", p:"Según la actividad", h:"Según la programación"},
+  {n:"Tren turístico de la Sabana", p:"Tarifa del operador", h:"Días y horarios del operador"}
+];
+
+/* ============ RENDER ============ */
+const $ = (s,r=document)=>r.querySelector(s);
+function el(tag, attrs={}, kids=[]){
+  const e = document.createElement(tag);
+  for(const [k,v] of Object.entries(attrs)){
+    if(k==="class") e.className=v; else if(k==="html") e.innerHTML=v; else if(k==="text") e.textContent=v; else e.setAttribute(k,v);
+  }
+  [].concat(kids).forEach(c=>e.append(c));
+  return e;
+}
+
+// Hero
+$("#heroArches").innerHTML = ["iglesia","plaza","montana"].map(s=>`<div class="arch">${scene(s)}</div>`).join("");
+
+// Lugares + filtros
+const TAGS = ["Todos","Patrimonio","Cultura","Experiencia","Cerca"];
+let activeTag = "Todos";
+function renderPlaces(){
+  const box = $("#placeCards"); box.innerHTML = "";
+  PLACES.filter(p=>activeTag==="Todos"||p.t===activeTag).forEach(p=>{
+    const card = el("article",{class:"card"},[
+      el("div",{class:"arch",html:scene(p.s)}),
+      el("span",{class:"chip","data-t":p.t,text:p.t}),
+      el("h3",{text:p.n}),
+      el("p",{text:p.d}),
+      el("details",{},[el("summary",{text:"Más información"}),el("p",{text:p.m})])
+    ]);
+    box.append(card);
+  });
+}
+const fbox = $("#filters");
+TAGS.forEach(t=>{
+  const b = el("button",{type:"button","aria-pressed":t===activeTag?"true":"false",text:t});
+  b.addEventListener("click",()=>{
+    activeTag=t;
+    fbox.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x.textContent===t?"true":"false"));
+    renderPlaces();
+  });
+  fbox.append(b);
+});
+renderPlaces();
+
+// Historia
+$("#timeline").append(...ERAS.map((e,i)=>{
+  const d = el("details",{class:"era"});
+  if(i===0) d.open = true;
+  d.append(el("summary",{},[el("span",{class:"yr",text:e.y}),el("span",{class:"ttl",text:e.t}),el("span",{class:"sum",text:e.s})]), el("p",{class:"more",text:e.m}));
+  return d;
+}));
+$("#pillars").append(...PILLARS.map(p=>el("div",{class:"pillar"},[el("h3",{text:p.t}),el("p",{text:p.d})])));
+
+// Gastronomía
+$("#food").append(...FOOD.map(f=>el("div",{class:"dish"},[el("div",{class:"plate",html:scene("plato")}),el("div",{},[el("h3",{text:f.n}),el("p",{text:f.d})])])));
+
+// Actividades
+$("#acts").append(...ACTS.map(a=>el("div",{class:"act"},[
+  el("div",{class:"ico",style:`background:${a.c}`,html:`<svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[a.i]}</svg>`}),
+  el("h3",{text:a.n}), el("p",{text:a.d})
+])));
+
+// Agenda
+$("#events").append(...EVENTS.map(e=>el("article",{class:"event"},[
+  el("div",{},[el("span",{class:"chip","data-t":e.t,text:e.t}),el("h3",{style:"margin-top:8px",text:e.n}),el("p",{style:"margin-top:4px",text:e.d})]),
+  el("span",{class:"when",text:"Fecha por confirmar"})
+])));
+
+// Precios
+$("#priceRows").append(...PRICES.map(r=>{
+  const tr = el("tr");
+  tr.append(el("th",{scope:"row",text:r.n}), el("td",{class:r.free?"free":(r.p==="Por confirmar"?"tbc":""),text:r.p}), el("td",{class:r.h==="Por confirmar"?"tbc":"",text:r.h}));
+  return tr;
+}));
+
+// Reseñas
+const sel = $("#rPlace");
+sel.append(el("option",{value:"",text:"Elige un lugar"}), ...PLACES.map(p=>el("option",{value:p.n,text:p.n})), el("option",{value:"Zipaquirá en general",text:"Zipaquirá en general"}));
+let rating = 0;
+const starBox = $("#stars");
+for(let i=1;i<=5;i++){
+  const b = el("button",{type:"button","aria-label":`${i} de 5 estrellas`,"aria-pressed":"false",text:"★"});
+  b.addEventListener("click",()=>{rating=i;paintStars();});
+  starBox.append(b);
+}
+function paintStars(){
+  [...starBox.children].forEach((b,i)=>{b.classList.toggle("on",i<rating);b.setAttribute("aria-pressed",i+1===rating?"true":"false");});
+}
+const KEY = "zipaquira_reviews_v1";
+function loadReviews(){ try{ return JSON.parse(localStorage.getItem(KEY)||"[]"); }catch(e){ return []; } }
+function saveReviews(list){ try{ localStorage.setItem(KEY,JSON.stringify(list)); return true; }catch(e){ return false; } }
+function renderReviews(){
+  const box = $("#reviewList"); box.innerHTML = "";
+  const list = loadReviews();
+  if(!list.length){ box.append(el("p",{class:"empty",text:"Aún no hay opiniones. Escribe la primera."})); return; }
+  list.slice().reverse().forEach(r=>{
+    box.append(el("div",{class:"review"},[
+      el("div",{class:"top"},[el("b",{text:r.name}),el("span",{class:"st","aria-label":`${r.rating} de 5 estrellas`,text:"★".repeat(r.rating)})]),
+      el("div",{class:"pl",text:r.place}),
+      el("p",{text:r.text})
+    ]));
+  });
+}
+renderReviews();
+$("#reviewForm").addEventListener("submit",ev=>{
+  ev.preventDefault();
+  const name=$("#rName").value.trim(), place=sel.value, text=$("#rText").value.trim(), msg=$("#rMsg");
+  msg.classList.remove("err");
+  if(!name||!place||!rating||!text){ msg.classList.add("err"); msg.textContent="Completa tu nombre, el lugar, la calificación y tu opinión."; return; }
+  const list = loadReviews(); list.push({name,place,rating,text,ts:Date.now()});
+  if(saveReviews(list)){ msg.textContent="¡Gracias por compartir tu experiencia!"; ev.target.reset(); rating=0; paintStars(); renderReviews(); }
+  else { msg.classList.add("err"); msg.textContent="No pudimos guardar tu opinión en este navegador. Inténtalo de nuevo."; }
+});
+
+// Contacto
+$("#contactForm").addEventListener("submit",ev=>{
+  ev.preventDefault();
+  const n=$("#cName").value.trim(), m=$("#cMail").value.trim(), s=$("#cSubj").value.trim()||"Consulta turística", t=$("#cMsg").value.trim(), info=$("#cInfo");
+  info.classList.remove("err");
+  if(!n||!m||!t){ info.classList.add("err"); info.textContent="Completa tu nombre, correo y mensaje."; return; }
+  const body = `${t}\n\nNombre: ${n}\nCorreo: ${m}`;
+  location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(s)}&body=${encodeURIComponent(body)}`;
+  info.textContent = "Se abrirá tu aplicación de correo para enviar el mensaje.";
+});
+document.querySelectorAll("[data-subject]").forEach(a=>a.addEventListener("click",()=>{ $("#cSubj").value=a.dataset.subject; }));
+
+// Menú móvil
+const menuBtn=$("#menuBtn"), nav=$("#nav");
+menuBtn.addEventListener("click",()=>{ const o=nav.classList.toggle("open"); menuBtn.setAttribute("aria-expanded",o); });
+nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{ nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); }));
+document.addEventListener("keydown",e=>{ if(e.key==="Escape"){ nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); } });
+</script>
+</body>
+</html>
