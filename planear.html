@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es" class="sub">
+<head>
+<meta charset="utf-8">
+<title>Planea tu visita a Zipaquirá: actividades, agenda, precios y hoteles | Zipaquirá Turística</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Planea tu visita a Zipaquirá: actividades, agenda cultural, precios y horarios, hoteles, restaurantes y recomendaciones para llegar y moverte.">
+<meta name="theme-color" content="#1b2b4e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%231b2b4e'/%3E%3Ccircle cx='50' cy='50' r='19' fill='none' stroke='%23c9a45c' stroke-width='3'/%3E%3Ccircle cx='50' cy='50' r='5' fill='%23c9a45c'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="48" fill="#1b2b4e"/>
+    <circle cx="50" cy="50" r="45" fill="none" stroke="#c9a45c" stroke-width="1"/>
+    <circle cx="50" cy="50" r="19" fill="none" stroke="#c9a45c" stroke-width="1.4"/>
+    <circle cx="50" cy="50" r="12" fill="none" stroke="#c9a45c" stroke-width="1.2"/>
+    <circle cx="50" cy="50" r="3.4" fill="#c9a45c"/>
+    <g fill="#c9a45c">
+      <path d="M50 11l3.6 9-3.6 9-3.6-9z"/>
+      <path d="M50 89l3.6-9-3.6-9-3.6 9z"/>
+      <path d="M11 50l9-3.6 9 3.6-9 3.6z"/>
+      <path d="M89 50l-9-3.6-9 3.6 9 3.6z"/>
+    </g>
+    <g stroke="#c9a45c" stroke-width="1.3" stroke-linecap="round">
+      <path d="M25 25l6 6"/><path d="M75 25l-6 6"/><path d="M25 75l6-6"/><path d="M75 75l-6-6"/>
+    </g>
+  </symbol>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Zipaquirá, ir al inicio">
+      <svg aria-hidden="true"><use href="#logo"/></svg>
+      <span class="brand-name">Zipaquirá</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      Menú
+    </button>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="explorar.html">Explorar</a>
+      <a href="planear.html" aria-current="page">Planear tu visita</a>
+      <a href="comunidad.html">Comunidad</a>
+      <a href="comunidad.html#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Planea tu visita</h1>
+    <p>Actividades, agenda, precios y horarios, dónde dormir y comer, y lo esencial para llegar y moverte.</p>
+  </div>
+</section>
+<nav class="subnav" aria-label="En esta página"><div class="wrap"><a href="#actividades">Actividades</a><a href="#agenda">Agenda</a><a href="#precios">Precios y horarios</a><a href="#hoteles">Hoteles y restaurantes</a><a href="#visita">Información útil</a></div></nav>
+
+<!-- ACTIVIDADES -->
+<section class="block" id="actividades">
+  <div class="wrap">
+    <div class="s-head">
+      <h2>Actividades</h2>
+      <p>Muchas formas de conocer Zipaquirá: elige por categoría y arma tu día según tus intereses.</p>
+    </div>
+    <div class="filters" id="actFilters" role="group" aria-label="Filtrar actividades"></div>
+    <div class="acts" id="acts"></div>
+  </div>
+</section>
+
+<!-- AGENDA -->
+<section class="block bg-mist" id="agenda">
+  <div class="wrap">
+    <div class="s-head">
+      <h2>Agenda cultural y eventos</h2>
+      <p>Festivales, encuentros y actividades que llenan de vida al municipio. Cuando una fecha no está confirmada, te indicamos dónde consultar la programación oficial.</p>
+    </div>
+    <div class="events" id="events"></div>
+    <p class="note">Para fechas vigentes consulta los canales oficiales de la Alcaldía de Zipaquirá y de las entidades culturales del municipio.</p>
+  </div>
+</section>
+
+<!-- PRECIOS -->
+<section class="block" id="precios">
+  <div class="wrap">
+    <div class="s-head">
+      <h2>Precios y horarios</h2>
+      <p>Una guía rápida para saber cuánto cuesta y cuándo ir. Destacamos los espacios de entrada libre.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th scope="col">Lugar o actividad</th><th scope="col">Ingreso</th><th scope="col">Horario</th><th scope="col">Información adicional</th></tr></thead>
+        <tbody id="priceRows"></tbody>
+      </table>
+    </div>
+    <p class="note">Horarios y tarifas pueden cambiar. No publicamos valores que no estén confirmados: confírmalos con cada sitio antes de tu visita.</p>
+  </div>
+</section>
+
+<!-- HOTELES Y RESTAURANTES -->
+<section class="block bg-blue" id="hoteles">
+  <div class="wrap">
+    <div class="s-head">
+      <h2>Hoteles y restaurantes</h2>
+      <p>Opciones mencionadas en guías y medios locales. Cada tarjeta lleva a su ubicación en el mapa; confirma datos de contacto, precios y disponibilidad directamente.</p>
+    </div>
+    <h3 class="sub-head">Dónde quedarte</h3>
+    <div class="biz-grid" id="hotels"></div>
+    <h3 class="sub-head">Dónde comer</h3>
+    <div class="biz-grid" id="restaurants"></div>
+    <div class="stay">
+      <div class="stay-card">
+        <h3>Más opciones</h3>
+        <p>Explora más hoteles, hospedajes y restaurantes en el mapa.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn-white btn-sm" href="https://www.google.com/maps/search/hoteles+en+Zipaquir%C3%A1" target="_blank" rel="noopener">Hoteles en el mapa</a>
+          <a class="btn btn-white btn-sm" href="https://www.google.com/maps/search/restaurantes+en+Zipaquir%C3%A1" target="_blank" rel="noopener">Restaurantes en el mapa</a>
+        </div>
+      </div>
+      <div class="stay-card join">
+        <h3>¿Tienes un negocio local?</h3>
+        <p>Cuéntanos sobre tu hotel, restaurante o servicio turístico para incluirlo en la página.</p>
+        <a class="btn btn-blue" href="comunidad.html?asunto=Quiero%20incluir%20mi%20negocio#contacto">Escríbenos</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFORMACION UTIL -->
+<section class="block" id="visita">
+  <div class="wrap">
+    <div class="s-head">
+      <h2>Información útil para tu visita</h2>
+      <p>Lo esencial para llegar, moverte y disfrutar Zipaquirá de forma responsable.</p>
+    </div>
+    <div class="info-grid" id="tips"></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <a class="brand" href="index.html" aria-label="Ir al inicio"><svg aria-hidden="true"><use href="#logo"/></svg><span class="brand-name">Zipaquirá</span></a>
+        <p class="tag">RAÍCES • TIERRA • TRADICIÓN</p>
+      </div>
+      <nav aria-label="Pie de página">
+        <a href="explorar.html#lugares">Lugares</a><a href="explorar.html#historia">Historia y cultura</a><a href="explorar.html#gastronomia">Gastronomía</a><a href="planear.html#actividades">Actividades</a><a href="planear.html#agenda">Agenda</a><a href="planear.html#precios">Precios y horarios</a><a href="planear.html#hoteles">Hoteles y restaurantes</a><a href="planear.html#visita">Tu visita</a><a href="comunidad.html#sostenible">Turismo responsable</a><a href="comunidad.html#opiniones">Opiniones</a><a href="comunidad.html#contacto">Contacto</a>
+      </nav>
+    </div>
+    <details class="legal" style="margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14)"><summary style="cursor:pointer;font-weight:600;color:#e4edff">Créditos de fotografías y derechos de autor</summary><p style="margin-top:10px">Las fotografías reales pertenecen a sus autores y se muestran con enlace a su página en Wikimedia Commons, donde constan el autor y la licencia de cada archivo. Las imágenes sin crédito son ilustraciones de reemplazo. Reutilizar una foto exige cumplir la licencia indicada en su página.</p><ul id="credits" style="padding-left:18px;font-size:.85rem"></ul></details><p class="legal">Aplicación digital para promover el turismo por medio de la identificación turística de Zipaquirá, Cundinamarca. Información sujeta a cambios; confirma datos con cada sitio antes de viajar. Fuentes: guías turísticas y medios locales citados en cada sección.</p>
+  </div>
+</footer>
+<script src="assets/common.js"></script>
+<script src="assets/planear.js"></script>
+</body>
+</html>

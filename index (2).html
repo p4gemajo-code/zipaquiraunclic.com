@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Zipaquirá Turística | Más de una historia</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Herramienta digital para descubrir y planear tu visita a Zipaquirá: patrimonio, plazas y parques, museos, gastronomía, actividades culturales, agenda, precios, horarios y servicios locales.">
+<meta name="theme-color" content="#1b2b4e">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%231b2b4e'/%3E%3Ccircle cx='50' cy='50' r='19' fill='none' stroke='%23c9a45c' stroke-width='3'/%3E%3Ccircle cx='50' cy='50' r='5' fill='%23c9a45c'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="48" fill="#1b2b4e"/>
+    <circle cx="50" cy="50" r="45" fill="none" stroke="#c9a45c" stroke-width="1"/>
+    <circle cx="50" cy="50" r="19" fill="none" stroke="#c9a45c" stroke-width="1.4"/>
+    <circle cx="50" cy="50" r="12" fill="none" stroke="#c9a45c" stroke-width="1.2"/>
+    <circle cx="50" cy="50" r="3.4" fill="#c9a45c"/>
+    <g fill="#c9a45c">
+      <path d="M50 11l3.6 9-3.6 9-3.6-9z"/>
+      <path d="M50 89l3.6-9-3.6-9-3.6 9z"/>
+      <path d="M11 50l9-3.6 9 3.6-9 3.6z"/>
+      <path d="M89 50l-9-3.6-9 3.6 9 3.6z"/>
+    </g>
+    <g stroke="#c9a45c" stroke-width="1.3" stroke-linecap="round">
+      <path d="M25 25l6 6"/><path d="M75 25l-6 6"/><path d="M25 75l6-6"/><path d="M75 75l-6-6"/>
+    </g>
+  </symbol>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Zipaquirá, ir al inicio">
+      <svg aria-hidden="true"><use href="#logo"/></svg>
+      <span class="brand-name">Zipaquirá</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      Menú
+    </button>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="index.html" aria-current="page">Inicio</a>
+      <a href="explorar.html">Explorar</a>
+      <a href="planear.html">Planear tu visita</a>
+      <a href="comunidad.html">Comunidad</a>
+      <a href="comunidad.html#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+<!-- INICIO -->
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div>
+      <h1>Zipaquirá tiene más de una historia</h1>
+      <p class="lead">Zipaquirá es mucho más que un solo atractivo turístico. Esta página reúne su patrimonio histórico, su arquitectura y sus plazas y parques; su cultura, sus tradiciones y su gastronomía; sus experiencias religiosas, recreativas y de naturaleza; además de eventos y servicios locales, para que descubras el municipio y planees tu visita con información clara y organizada.</p>
+      <div class="actions">
+        <a class="btn btn-gold" href="explorar.html#lugares">Explorar lugares</a>
+        <a class="btn btn-line" href="planear.html#agenda">Ver agenda y eventos</a>
+      </div>
+      <div class="pill-row" aria-hidden="true"><span>Patrimonio</span><span>Cultura</span><span>Plazas y parques</span><span>Gastronomía</span><span>Tradiciones</span><span>Naturaleza</span></div>
+    </div>
+    <div class="arches" id="heroArches" aria-hidden="true"></div>
+  </div>
+</section>
+
+<div class="quick">
+  <div class="wrap quick-grid">
+    <a href="explorar.html#lugares"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Qué visitar</b><span class="s">Lugares para todos los gustos</span></a>
+    <a href="planear.html#precios"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><b>Precios y horarios</b><span class="s">Organiza tu recorrido</span></a>
+    <a href="planear.html#agenda"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M4 10h16M9 3v4M15 3v4"/></svg></span><b>Agenda cultural</b><span class="s">Festivales y eventos</span></a>
+    <a href="planear.html#hoteles"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20V8l9-5 9 5v12M9 20v-6h6v6"/></svg></span><b>Dónde quedarte</b><span class="s">Hoteles y restaurantes</span></a>
+  </div>
+</div>
+
+<!-- CAMINOS -->
+<section class="block bg-mist" id="caminos">
+  <div class="wrap">
+    <div class="s-head">
+      <h2>¿Por dónde empezar?</h2>
+      <p>La información está organizada en tres espacios. Elige según lo que necesites hoy.</p>
+    </div>
+    <div class="paths">
+      <div class="path">
+        <span class="n">1</span>
+        <h3>Explorar</h3>
+        <p>Conoce el municipio: sus lugares, su memoria y su mesa.</p>
+        <ul>
+          <li><a href="explorar.html#lugares">Lugares turísticos</a></li>
+          <li><a href="explorar.html#historia">Historia y cultura</a></li>
+          <li><a href="explorar.html#gastronomia">Gastronomía</a></li>
+        </ul>
+        <a class="btn btn-blue" href="explorar.html">Ir a Explorar</a>
+      </div>
+      <div class="path">
+        <span class="n">2</span>
+        <h3>Planear tu visita</h3>
+        <p>Todo lo práctico para organizar el viaje y el recorrido.</p>
+        <ul>
+          <li><a href="planear.html#actividades">Actividades</a></li>
+          <li><a href="planear.html#agenda">Agenda y eventos</a></li>
+          <li><a href="planear.html#precios">Precios y horarios</a></li>
+          <li><a href="planear.html#hoteles">Hoteles y restaurantes</a></li>
+          <li><a href="planear.html#visita">Información útil</a></li>
+        </ul>
+        <a class="btn btn-blue" href="planear.html">Ir a Planear</a>
+      </div>
+      <div class="path">
+        <span class="n">3</span>
+        <h3>Comunidad</h3>
+        <p>Visita con respeto, comparte tu experiencia y escríbenos.</p>
+        <ul>
+          <li><a href="comunidad.html#sostenible">Turismo responsable</a></li>
+          <li><a href="comunidad.html#opiniones">Opiniones y experiencias</a></li>
+          <li><a href="comunidad.html#contacto">Contacto</a></li>
+        </ul>
+        <a class="btn btn-blue" href="comunidad.html">Ir a Comunidad</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTO -->
+<section class="block" id="proyecto">
+  <div class="wrap">
+    <div class="s-head">
+      <h2>Una herramienta digital para conocer Zipaquirá</h2>
+      <p>Este proyecto promueve la identificación turística de Zipaquirá: muestra que el municipio tiene muchas experiencias, lugares, historias y espacios para visitar y valorar, y que el turismo puede beneficiar a toda la comunidad.</p>
+    </div>
+    <div class="goal-grid" id="goals"></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <a class="brand" href="index.html" aria-label="Ir al inicio"><svg aria-hidden="true"><use href="#logo"/></svg><span class="brand-name">Zipaquirá</span></a>
+        <p class="tag">RAÍCES • TIERRA • TRADICIÓN</p>
+      </div>
+      <nav aria-label="Pie de página">
+        <a href="explorar.html#lugares">Lugares</a><a href="explorar.html#historia">Historia y cultura</a><a href="explorar.html#gastronomia">Gastronomía</a><a href="planear.html#actividades">Actividades</a><a href="planear.html#agenda">Agenda</a><a href="planear.html#precios">Precios y horarios</a><a href="planear.html#hoteles">Hoteles y restaurantes</a><a href="planear.html#visita">Tu visita</a><a href="comunidad.html#sostenible">Turismo responsable</a><a href="comunidad.html#opiniones">Opiniones</a><a href="comunidad.html#contacto">Contacto</a>
+      </nav>
+    </div>
+    <details class="legal" style="margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14)"><summary style="cursor:pointer;font-weight:600;color:#e4edff">Créditos de fotografías y derechos de autor</summary><p style="margin-top:10px">Las fotografías reales pertenecen a sus autores y se muestran con enlace a su página en Wikimedia Commons, donde constan el autor y la licencia de cada archivo. Las imágenes sin crédito son ilustraciones de reemplazo. Reutilizar una foto exige cumplir la licencia indicada en su página.</p><ul id="credits" style="padding-left:18px;font-size:.85rem"></ul></details><p class="legal">Aplicación digital para promover el turismo por medio de la identificación turística de Zipaquirá, Cundinamarca. Información sujeta a cambios; confirma datos con cada sitio antes de viajar. Fuentes: guías turísticas y medios locales citados en cada sección.</p>
+  </div>
+</footer>
+<script src="assets/common.js"></script>
+<script src="assets/inicio.js"></script>
+</body>
+</html>
