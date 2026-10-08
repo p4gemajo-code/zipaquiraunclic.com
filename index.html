@@ -2,9 +2,9 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<title>Zipaquirá Turística | Raíces, tierra y tradición</title>
+<title>Zipaquirá Turística | Más de una historia</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Planea tu visita a Zipaquirá: lugares turísticos, historia y cultura, gastronomía, actividades, agenda de eventos, precios, horarios y servicios locales.">
+<meta name="description" content="Herramienta digital para descubrir y planear tu visita a Zipaquirá: patrimonio, plazas y parques, museos, gastronomía, actividades culturales, agenda, precios, horarios y servicios locales.">
 <meta name="theme-color" content="#1b2b4e">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%231b2b4e'/%3E%3Ccircle cx='50' cy='50' r='19' fill='none' stroke='%23c9a45c' stroke-width='3'/%3E%3Ccircle cx='50' cy='50' r='5' fill='%23c9a45c'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -233,6 +233,53 @@ footer nav{display:flex;flex-wrap:wrap;gap:6px 18px;max-width:420px}
 footer nav a{text-decoration:none;font-size:.93rem}
 footer nav a:hover{color:var(--white)}
 footer .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);font-size:.85rem}
+
+/* ---------- Ampliación ---------- */
+.card .arch img,.arch img,.plate img,.gal img{display:block;width:100%;height:100%;object-fit:cover}
+.credit{font-size:.72rem;color:var(--muted);margin-top:-6px}.credit[hidden]{display:none}
+.hero .lead{max-width:38rem}
+.pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.pill-row span{font-size:.8rem;font-weight:500;padding:5px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.35);color:#e4edff}
+.goal-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.goal{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:20px}
+.goal .n{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--navy);color:var(--gold);font-weight:700;margin-bottom:10px}
+.goal h3{font-size:1.1rem;color:var(--navy);margin-bottom:4px}
+.goal p{font-size:.93rem;color:var(--muted)}
+.facts{display:grid;gap:6px;margin:0;padding:0;list-style:none;font-size:.93rem;color:var(--muted)}
+.facts b{color:var(--navy)}
+.card .actions-line{font-size:.93rem;color:var(--muted)}
+.cat-title{font-size:1.25rem;color:var(--navy);margin:34px 0 14px;display:flex;align-items:center;gap:10px}
+.cat-title:first-of-type{margin-top:0}
+.cat-title::after{content:"";flex:1;height:1px;background:var(--line)}
+.dish .plate{width:96px;height:96px}
+.dish.featured{grid-column:1/-1;background:linear-gradient(135deg,#fff,#ffe6df);border-color:#f3b9aa}.dish.featured .plate{width:132px;height:132px;border-color:var(--coral)}.dish.featured h3{font-size:1.5rem}.dish.featured .tag{color:#a8381f}.dish .tag{font-size:.75rem;font-weight:600;color:#116b69}
+.info-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.info{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:22px}
+.info h3{font-size:1.15rem;color:var(--navy);margin-bottom:8px}
+.info ul{margin:0;padding-left:18px;color:var(--muted);font-size:.95rem;display:grid;gap:6px}
+.bg-navy .info{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18)}
+.bg-navy .info h3{color:var(--white)}
+.bg-navy .info ul{color:#d6e4ff}
+.eco-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:6px}
+.eco{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);border-radius:20px;padding:18px}
+.eco h3{font-size:1.02rem;margin-bottom:4px}
+.eco p{color:#e4edff;font-size:.92rem}
+.biz-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));margin-bottom:24px}
+.biz{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.biz h3{font-size:1.15rem}
+.biz p{color:#e4edff;font-size:.92rem}
+.biz .chip{background:rgba(255,255,255,.9)}
+.btn-sm{padding:8px 16px;font-size:.88rem}
+.sub-head{font-family:var(--display);font-size:1.3rem;margin:8px 0 14px}
+.rv-top{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+.rv-top .big{font-family:var(--display);font-size:2.2rem;font-weight:800;color:var(--navy);line-height:1}
+.rv-top .st{color:var(--gold);letter-spacing:2px}
+.rec{display:inline-block;font-size:.78rem;font-weight:600;padding:2px 10px;border-radius:999px;background:#d9f3f2;color:#116b69;margin-left:6px}
+.rec.no{background:#ffe6df;color:#a8381f}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.tag-free{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:999px;background:#d9f3f2;color:#116b69;margin-left:6px}
+.legal a{color:#e4edff}
+@media (max-width:520px){.dish{flex-direction:column;text-align:center}.cards{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -276,6 +323,7 @@ footer .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255
       <a href="#agenda">Agenda</a>
       <a href="#precios">Precios y horarios</a>
       <a href="#hoteles">Hoteles y restaurantes</a>
+      <a href="#visita">Tu visita</a>
       <a href="#opiniones">Opiniones</a>
       <a href="#contacto">Contacto</a>
     </nav>
@@ -289,11 +337,12 @@ footer .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255
   <div class="wrap">
     <div>
       <h1>Zipaquirá tiene más de una historia</h1>
-      <p class="lead">Patrimonio, cultura, sabores y escapadas de la Sabana. Todo lo que necesitas para planear tu visita, en un solo lugar.</p>
+      <p class="lead">Zipaquirá es mucho más que un solo atractivo turístico. Esta página reúne su patrimonio histórico, su arquitectura y sus plazas y parques; su cultura, sus tradiciones y su gastronomía; sus experiencias religiosas, recreativas y de naturaleza; además de eventos y servicios locales, para que descubras el municipio y planees tu visita con información clara y organizada.</p>
       <div class="actions">
         <a class="btn btn-gold" href="#lugares">Explorar lugares</a>
         <a class="btn btn-line" href="#agenda">Ver agenda y eventos</a>
       </div>
+      <div class="pill-row" aria-hidden="true"><span>Patrimonio</span><span>Cultura</span><span>Plazas y parques</span><span>Gastronomía</span><span>Tradiciones</span><span>Naturaleza</span></div>
     </div>
     <div class="arches" id="heroArches" aria-hidden="true"></div>
   </div>
@@ -308,15 +357,27 @@ footer .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255
   </div>
 </div>
 
+<!-- PROYECTO -->
+<section class="block" id="proyecto">
+  <div class="wrap">
+    <div class="s-head">
+      <h2>Una herramienta digital para conocer Zipaquirá</h2>
+      <p>Este proyecto promueve la identificación turística de Zipaquirá: muestra que el municipio tiene muchas experiencias, lugares, historias y espacios para visitar y valorar, y que el turismo puede beneficiar a toda la comunidad.</p>
+    </div>
+    <div class="goal-grid" id="goals"></div>
+  </div>
+</section>
+
 <!-- LUGARES -->
-<section class="block" id="lugares">
+<section class="block bg-mist" id="lugares">
   <div class="wrap">
     <div class="s-head">
       <h2>Lugares turísticos</h2>
-      <p>Plazas, museos, templos y paseos para recorrer a tu ritmo. Toca cada tarjeta para ampliar la información.</p>
+      <p>Plazas, parques, museos, templos y espacios culturales para recorrer a tu ritmo. Filtra por tipo y abre cada tarjeta para ver actividades, ubicación y recomendaciones.</p>
     </div>
     <div class="filters" id="filters" role="group" aria-label="Filtrar lugares"></div>
     <div class="cards" id="placeCards"></div>
+    <p class="note">Precios y horarios: cuando no hay un dato oficial confirmado, la página lo indica como «Consultar». Los créditos de fotografías aparecen bajo cada imagen.</p>
   </div>
 </section>
 
@@ -326,11 +387,12 @@ footer .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255
     <div class="history">
       <div class="s-head">
         <h2>Historia y cultura</h2>
-        <p>Zipaquirá guarda siglos de memoria: pueblos ancestrales, un pasado colonial, un papel en la historia del país y una vida cultural que sigue creciendo. Abre cada etapa para leer más.</p>
+        <p>Zipaquirá guarda siglos de memoria: pueblos ancestrales, un pasado colonial, un papel en la historia política del país y una vida cultural que sigue creciendo. Abre cada etapa de la línea de tiempo para leer más.</p>
       </div>
       <div class="timeline" id="timeline"></div>
     </div>
-    <div class="pillars" id="pillars"></div>
+    <h3 class="sub-head" style="margin-top:46px">Los pilares de su identidad</h3>
+    <div class="pillars" style="margin-top:0" id="pillars"></div>
   </div>
 </section>
 
@@ -339,9 +401,15 @@ footer .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255
   <div class="wrap">
     <div class="s-head">
       <h2>Gastronomía</h2>
-      <p>La mesa de Zipaquirá es sabana, tradición y sazón de casa.</p>
+      <p>La mesa de Zipaquirá es sabana, tradición y sazón de casa: platos contundentes, dulces de antes y cocina local con productos de la región.</p>
     </div>
+    <h3 class="cat-title">Platos y sabores tradicionales</h3>
     <div class="food" id="food"></div>
+    <h3 class="cat-title">Dulces, panes y productos de la región</h3>
+    <div class="food" id="sweets"></div>
+    <h3 class="cat-title">Dónde conocer la cocina local</h3>
+    <div class="food" id="foodPlaces"></div>
+    <p class="note">Los sitios mencionados provienen de guías y medios turísticos; confirma horarios, menú y precios directamente con cada establecimiento.</p>
   </div>
 </section>
 
@@ -350,8 +418,9 @@ footer .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255
   <div class="wrap">
     <div class="s-head">
       <h2>Actividades</h2>
-      <p>Ideas para armar tu día, sea que vengas en familia, en pareja o con amigos.</p>
+      <p>Muchas formas de conocer Zipaquirá: elige por categoría y arma tu día según tus intereses.</p>
     </div>
+    <div class="filters" id="actFilters" role="group" aria-label="Filtrar actividades"></div>
     <div class="acts" id="acts"></div>
   </div>
 </section>
@@ -361,9 +430,10 @@ footer .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255
   <div class="wrap">
     <div class="s-head">
       <h2>Agenda cultural y eventos</h2>
-      <p>Festivales, conciertos y celebraciones que llenan de vida al municipio.</p>
+      <p>Festivales, encuentros y actividades que llenan de vida al municipio. Cuando una fecha no está confirmada, te indicamos dónde consultar la programación oficial.</p>
     </div>
     <div class="events" id="events"></div>
+    <p class="note">Para fechas vigentes consulta los canales oficiales de la Alcaldía de Zipaquirá y de las entidades culturales del municipio.</p>
   </div>
 </section>
 
@@ -372,15 +442,15 @@ footer .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255
   <div class="wrap">
     <div class="s-head">
       <h2>Precios y horarios</h2>
-      <p>Una guía rápida para saber cuánto cuesta y cuándo ir.</p>
+      <p>Una guía rápida para saber cuánto cuesta y cuándo ir. Destacamos los espacios de entrada libre.</p>
     </div>
     <div class="table-wrap">
       <table>
-        <thead><tr><th scope="col">Lugar</th><th scope="col">Ingreso</th><th scope="col">Horario</th></tr></thead>
+        <thead><tr><th scope="col">Lugar o actividad</th><th scope="col">Ingreso</th><th scope="col">Horario</th><th scope="col">Información adicional</th></tr></thead>
         <tbody id="priceRows"></tbody>
       </table>
     </div>
-    <p class="note">Horarios y tarifas pueden cambiar. Confírmalos con cada sitio antes de tu visita.</p>
+    <p class="note">Horarios y tarifas pueden cambiar. No publicamos valores que no estén confirmados: confírmalos con cada sitio antes de tu visita.</p>
   </div>
 </section>
 
@@ -389,18 +459,20 @@ footer .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255
   <div class="wrap">
     <div class="s-head">
       <h2>Hoteles y restaurantes</h2>
-      <p>Encuentra dónde dormir y comer cerca del centro histórico.</p>
+      <p>Opciones mencionadas en guías y medios locales. Cada tarjeta lleva a su ubicación en el mapa; confirma datos de contacto, precios y disponibilidad directamente.</p>
     </div>
+    <h3 class="sub-head">Dónde quedarte</h3>
+    <div class="biz-grid" id="hotels"></div>
+    <h3 class="sub-head">Dónde comer</h3>
+    <div class="biz-grid" id="restaurants"></div>
     <div class="stay">
       <div class="stay-card">
-        <h3>Dónde quedarte</h3>
-        <p>Hoteles y hospedajes en Zipaquirá, con ubicación, fotos y reseñas en el mapa.</p>
-        <a class="btn btn-white" href="https://www.google.com/maps/search/hoteles+en+Zipaquir%C3%A1" target="_blank" rel="noopener">Ver hoteles en el mapa</a>
-      </div>
-      <div class="stay-card">
-        <h3>Dónde comer</h3>
-        <p>Restaurantes y cocinas locales para probar la sobrebarriga y otros sabores de la región.</p>
-        <a class="btn btn-white" href="https://www.google.com/maps/search/restaurantes+en+Zipaquir%C3%A1" target="_blank" rel="noopener">Ver restaurantes en el mapa</a>
+        <h3>Más opciones</h3>
+        <p>Explora más hoteles, hospedajes y restaurantes en el mapa.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn btn-white btn-sm" href="https://www.google.com/maps/search/hoteles+en+Zipaquir%C3%A1" target="_blank" rel="noopener">Hoteles en el mapa</a>
+          <a class="btn btn-white btn-sm" href="https://www.google.com/maps/search/restaurantes+en+Zipaquir%C3%A1" target="_blank" rel="noopener">Restaurantes en el mapa</a>
+        </div>
       </div>
       <div class="stay-card join">
         <h3>¿Tienes un negocio local?</h3>
@@ -411,23 +483,47 @@ footer .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255
   </div>
 </section>
 
+<!-- INFORMACION UTIL -->
+<section class="block" id="visita">
+  <div class="wrap">
+    <div class="s-head">
+      <h2>Información útil para tu visita</h2>
+      <p>Lo esencial para llegar, moverte y disfrutar Zipaquirá de forma responsable.</p>
+    </div>
+    <div class="info-grid" id="tips"></div>
+  </div>
+</section>
+
+<!-- TURISMO RESPONSABLE -->
+<section class="block bg-blue" id="sostenible">
+  <div class="wrap">
+    <div class="s-head">
+      <h2>Turismo responsable y sostenible</h2>
+      <p>Cuando visitamos con respeto, el turismo deja beneficios culturales, sociales y económicos para la comunidad y ayuda a conservar lo que hace especial a Zipaquirá.</p>
+    </div>
+    <div class="eco-grid" id="eco"></div>
+  </div>
+</section>
+
 <!-- OPINIONES -->
 <section class="block bg-mist" id="opiniones">
   <div class="wrap">
     <div class="s-head">
-      <h2>Opiniones de visitantes</h2>
-      <p>¿Ya visitaste Zipaquirá? Tu experiencia ayuda a otros viajeros a planear mejor.</p>
+      <h2>Opiniones y experiencias</h2>
+      <p>¿Ya visitaste Zipaquirá? Cuenta qué lugar conociste, cómo te fue y si lo recomendarías. Tu experiencia ayuda a otros viajeros a planear mejor.</p>
     </div>
     <div class="two">
       <form class="panel" id="reviewForm" novalidate>
         <div class="field"><label for="rName">Tu nombre</label><input type="text" id="rName" maxlength="40" autocomplete="name"></div>
         <div class="field"><label for="rPlace">Lugar que visitaste</label><select id="rPlace"></select></div>
         <div class="field"><label id="rateLbl">Calificación</label><div class="stars" id="stars" role="group" aria-labelledby="rateLbl"></div></div>
-        <div class="field"><label for="rText">Tu opinión</label><textarea id="rText" maxlength="400"></textarea></div>
+        <div class="field"><label for="rRec">¿Lo recomendarías?</label><select id="rRec"><option value="si">Sí, lo recomiendo</option><option value="no">No lo recomiendo</option></select></div>
+        <div class="field"><label for="rText">Tu experiencia</label><textarea id="rText" maxlength="400"></textarea></div>
         <button class="btn btn-blue" type="submit">Publicar opinión</button>
         <p class="msg" id="rMsg" role="status"></p>
+        <p class="note">Las opiniones se guardan solo en este navegador.</p>
       </form>
-      <div class="panel"><div id="reviewList" aria-live="polite"></div></div>
+      <div class="panel"><div id="reviewSummary"></div><div id="reviewList" aria-live="polite"></div></div>
     </div>
   </div>
 </section>
@@ -439,6 +535,10 @@ footer .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255
       <div class="s-head" style="margin-bottom:0">
         <h2>Contacto</h2>
         <p>Escríbenos para resolver dudas, sugerir un lugar o sumar tu negocio. Este proyecto nace para fomentar el turismo y fortalecer la identidad turística de Zipaquirá.</p>
+        <div style="margin-top:22px;display:grid;gap:10px">
+          <p><strong>Correo:</strong> <a href="mailto:zipaquiraunclic@gmail.com" style="color:#e4edff">zipaquiraunclic@gmail.com</a></p>
+          <p><strong>Teléfonos:</strong> <a href="tel:+573028582817" style="color:#e4edff">+57 302 858 2817</a> · <a href="tel:+573025270240" style="color:#e4edff">+57 302 527 0240</a></p>
+        </div>
       </div>
       <form class="panel" id="contactForm" novalidate>
         <div class="field"><label for="cName">Nombre</label><input type="text" id="cName" autocomplete="name"></div>
@@ -461,16 +561,16 @@ footer .legal{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255
         <p class="tag">RAÍCES • TIERRA • TRADICIÓN</p>
       </div>
       <nav aria-label="Pie de página">
-        <a href="#lugares">Lugares</a><a href="#historia">Historia y cultura</a><a href="#gastronomia">Gastronomía</a><a href="#actividades">Actividades</a><a href="#agenda">Agenda</a><a href="#precios">Precios y horarios</a><a href="#hoteles">Hoteles y restaurantes</a><a href="#opiniones">Opiniones</a><a href="#contacto">Contacto</a>
+        <a href="#lugares">Lugares</a><a href="#historia">Historia y cultura</a><a href="#gastronomia">Gastronomía</a><a href="#actividades">Actividades</a><a href="#agenda">Agenda</a><a href="#precios">Precios y horarios</a><a href="#hoteles">Hoteles y restaurantes</a><a href="#visita">Tu visita</a><a href="#sostenible">Turismo responsable</a><a href="#opiniones">Opiniones</a><a href="#contacto">Contacto</a>
       </nav>
     </div>
-    <p class="legal">Proyecto para el fomento del turismo en Zipaquirá, Cundinamarca. Información sujeta a cambios; confirma datos con cada sitio antes de viajar.</p>
+    <details class="legal" style="margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14)"><summary style="cursor:pointer;font-weight:600;color:#e4edff">Créditos de fotografías y derechos de autor</summary><p style="margin-top:10px">Las fotografías reales pertenecen a sus autores y se muestran con enlace a su página en Wikimedia Commons, donde constan el autor y la licencia de cada archivo. Las imágenes sin crédito son ilustraciones de reemplazo. Reutilizar una foto exige cumplir la licencia indicada en su página.</p><ul id="credits" style="padding-left:18px;font-size:.85rem"></ul></details><p class="legal">Aplicación digital para promover el turismo por medio de la identificación turística de Zipaquirá, Cundinamarca. Información sujeta a cambios; confirma datos con cada sitio antes de viajar. Fuentes: guías turísticas y medios locales citados en cada sección.</p>
   </div>
 </footer>
 
 <script>
 /* ============ CONFIGURACIÓN EDITABLE ============ */
-const CONTACT_EMAIL = "tu-correo@ejemplo.com"; // Cambia por el correo real del proyecto
+const CONTACT_EMAIL = "zipaquiraunclic@gmail.com";
 
 /* ============ ILUSTRACIONES (SVG) ============ */
 let uid = 0;
@@ -537,34 +637,118 @@ function scene(type){
 }
 
 /* ============ DATOS ============ */
+const TBC_P = "Consultar tarifa vigente";
+const TBC_H = "Consultar horario actualizado";
+const mapLink = n => "https://www.google.com/maps/search/" + encodeURIComponent(n + " Zipaquirá, Cundinamarca");
+
+/* Fotografías: coloca tus archivos en la carpeta /img con el nombre indicado en "img".
+   Si el archivo no existe, la tarjeta muestra una ilustración de reemplazo.
+   En "credit" va el enlace a la página del archivo con autor y licencia. */
+const GOALS = [
+  {t:"Promover diversos destinos", d:"Más lugares, rutas y experiencias para repartir el turismo por todo el municipio."},
+  {t:"Información clara y organizada", d:"Lugares, precios, horarios y recomendaciones en un solo sitio."},
+  {t:"Difundir actividades culturales", d:"Eventos, museos, tradiciones y propuestas de la comunidad."},
+  {t:"Precios y actividades gratuitas", d:"Identificamos los espacios de entrada libre para que planees según tu presupuesto."},
+  {t:"Conectar con servicios locales", d:"Hoteles, restaurantes y negocios del municipio."},
+  {t:"Compartir experiencias", d:"Tus opiniones ayudan a otros visitantes a decidir y a mejorar la oferta."},
+  {t:"Fortalecer la identidad turística", d:"Reconocer y valorar todo lo que hace único a Zipaquirá."}
+];
+
 const PLACES = [
-  {s:"plaza", t:"Patrimonio", n:"Plaza de los Comuneros", d:"El punto de encuentro del centro histórico, rodeado de arquitectura colonial.", m:"Desde aquí empieza el recorrido a pie por el casco antiguo: el templo diocesano, calles empedradas y comercio local. Es un buen lugar para orientarte antes de visitar museos y casonas cercanas."},
-  {s:"museo", t:"Cultura", n:"Casa Museo Quevedo Zornoza", d:"Una casa del centro histórico para conocer a la familia Quevedo y su aporte a la música y la literatura colombianas.", m:"Permite entender cómo se vivía en la Zipaquirá de antes y por qué esta familia es parte de la identidad cultural del municipio. Consulta el horario antes de ir."},
-  {s:"arqueo", t:"Patrimonio", n:"Museo Arqueológico", d:"Objetos y vestigios de los pueblos muiscas que habitaron la región.", m:"Una parada ideal para conectar el paisaje de hoy con la historia ancestral de la Sabana de Bogotá."},
-  {s:"cultura", t:"Cultura", n:"Casa de la Cultura Arturo Wagner", d:"Centro de formación artística con clases de canto y baile.", m:"Es el lugar para acercarte a la vida cultural local. Pregunta por presentaciones y muestras abiertas al público."},
-  {s:"iglesia", t:"Patrimonio", n:"Iglesias coloniales", d:"Cerca de diez templos de estilo colonial abiertos al público.", m:"Recórrelas con calma: cada una cuenta algo distinto sobre la fe, el arte y el desarrollo urbano del municipio. Respeta los horarios de culto."},
-  {s:"tren", t:"Experiencia", n:"Tren turístico de la Sabana", d:"Llega desde Bogotá en tren y empieza el paseo desde la estación.", m:"El tren sale de la Estación de la Sabana, en Bogotá, y recorre varios puntos de la ciudad hasta llegar a Zipaquirá. Consulta días, horarios y tarifas con el operador."},
-  {s:"montana", t:"Cerca", n:"Escapadas cercanas: Suesca", d:"Laguna, caminatas y escalada a poca distancia.", m:"Suesca, Tabio y Guatavita completan un plan de varios días por los pueblos de la Sabana."}
+  {s:"plaza", t:"Plazas y parques", n:"Plaza de los Comuneros", img:"/plaza-comuneros.jpg", credit:"https://commons.wikimedia.org/wiki/File:Plaza_principal_de_Zipaquira..JPG", author:"Kamilokardona", license:"CC BY-SA 3.0",
+   d:"La plaza principal del centro histórico, también conocida como Plaza Mayor o Plaza González Forero.",
+   imp:"Su nombre recuerda las Capitulaciones de Zipaquirá de 1781. Reúne el templo diocesano y el Palacio Municipal, y es el punto de partida natural del recorrido por el casco antiguo.",
+   act:["Caminar y orientarte antes de recorrer el centro","Observar la arquitectura colonial y republicana","Tomar fotografías y descansar en la plaza"],
+   loc:"Centro histórico de Zipaquirá", rec:"Empieza aquí tu recorrido a pie y sigue hacia el Parque de la Independencia.", p:"Entrada libre", h:"Espacio público"},
+  {s:"plaza", t:"Plazas y parques", n:"Parque de la Independencia", img:"https://extrategiamedios.com/wp-content/uploads/2026/08/El-Parque-de-la-Independencia-podria-recuperar-su-antiguo-nombre-de-Plaza-de-Zapata-en-Zipaquira1-1200x800.jpg", credit:"https://extrategiamedios.com/el-parque-de-la-independencia-podria-recuperar-su-antiguo-nombre-de-plaza-zapata-en-zipaquira/", author:"Extrategia Medios",
+   d:"Antigua plaza de mercado convertida en espacio de encuentro con cafés, restaurantes y bares.",
+   imp:"Se llamó Plaza Agustín Zapata y fue sede del mercado municipal; se renovó con motivo del bicentenario de la Independencia. Tiene una escultura de Antonio Nariño y una fuente que antes estaba en la Plaza de los Comuneros.",
+   act:["Ver la escultura de Antonio Nariño","Tomar un café o almorzar en la plaza","Disfrutar el ambiente nocturno de sus bares"],
+   loc:"Calle 5, centro de Zipaquirá", rec:"Buen lugar para hacer una pausa gastronómica durante el recorrido.", p:"Entrada libre", h:"Espacio público"},
+  {s:"plaza", t:"Plazas y parques", n:"Plaza de los Mártires (Parque de la Floresta)", img:"https://www.zipaquira.travel/wp-content/uploads/2025/12/1-8-1024x683.jpg", credit:"https://www.zipaquira.travel/plazas-y-parques/", author:"Zipaquirá Travel",
+   d:"Plaza con un obelisco dedicado a la memoria de seis mártires locales.",
+   imp:"El obelisco representó en su día a las provincias del antiguo departamento de Quesada y hoy lleva los nombres de seis mártires importantes para la historia de Zipaquirá.",
+   act:["Leer los nombres y la historia del monumento","Hacer una parada tranquila en el recorrido"],
+   loc:"Zona del centro; consulta el mapa", rec:"Combínala con las demás plazas históricas del municipio.", p:"Entrada libre", h:"Espacio público"},
+  {s:"iglesia", t:"Religioso", n:"Templo diocesano y patrimonio religioso", img:"https://hotelcaminodelasal.com/wp-content/uploads/2021/10/001_catedral_diocesana.jpg", credit:"https://hotelcaminodelasal.com/catedral-diocesana/", author:"Hotel Camino de la Sal",
+   d:"La iglesia de piedra frente a la plaza principal y los templos de estilo colonial del municipio.",
+   imp:"Los templos cuentan cómo se desarrollaron la fe, el arte y el trazado urbano de la población desde la época colonial.",
+   act:["Admirar fachadas y detalles arquitectónicos","Visitar con respeto fuera de los horarios de culto"],
+   loc:"Alrededor de la Plaza de los Comuneros", rec:"Respeta las ceremonias; evita flash y conversaciones en voz alta dentro de los templos.", p:"Entrada libre (templos)", h:"Según cada parroquia"},
+  {s:"museo", t:"Cultura", n:"Casa Museo Guillermo Quevedo Zornoza", img:"https://extrategiamedios.com/wp-content/uploads/2023/05/Museo-Zipaquira-Casa-Guillermo-Quevedo-Zornoza-2.jpg", credit:"https://extrategiamedios.com/desfile-ceremonias-y-actividades-gratuitas-en-zipaquira-por-el-dia-de-los-martires-este-fin-de-semana/", author:"Extrategia Medios",
+   d:"Casa-museo con objetos de varias generaciones de la familia Quevedo, ligada a la literatura, la poesía, la música y la pintura.",
+   imp:"Según las guías turísticas locales, conserva piezas de los últimos siglos, incluidos objetos asociados a próceres de la Independencia. Ayuda a entender la vida cultural de la Zipaquirá de antes.",
+   act:["Recorrer las salas de la casa","Conocer la historia cultural de la familia","Combinar con otros museos en una ruta"],
+   loc:"Centro histórico de Zipaquirá", rec:"Confirma horario y tarifa antes de ir.", p:TBC_P, h:TBC_H},
+  {s:"cultura", t:"Cultura", n:"Centro Cultural Casa del Nobel Gabriel García Márquez", img:"https://zipaquiraturistica.com/dashboard-zipa-turis/storage/ciudades/17.webp", credit:"https://zipaquiraturistica.com/la-ciudad/centro-cultural-casa-del-nobel-gabriel-garcia-marquez", author:"Zipaquirá Turística",
+   d:"Edificio colonial dedicado a la vida del Nobel Gabriel García Márquez, que también alberga escuelas de formación cultural.",
+   imp:"Conecta a Zipaquirá con la literatura colombiana y con la formación artística de sus habitantes.",
+   act:["Conocer la historia del escritor","Preguntar por talleres y muestras abiertas"],
+   loc:"A una cuadra del parque principal", rec:"Consulta la programación antes de visitar.", p:TBC_P, h:TBC_H},
+  {s:"plaza", t:"Patrimonio", n:"Calles y arquitectura del centro histórico", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Zipaquirá_City.jpg?width=900", credit:"https://commons.wikimedia.org/wiki/File:Zipaquirá_City.jpg",
+   d:"Calles peatonales con tiendas y cafés, edificios coloniales y republicanos como la alcaldía, de techos verdes.",
+   imp:"Es el mejor lugar para leer la historia del municipio en su arquitectura: fachadas de piedra, plazas y casonas.",
+   act:["Recorrido a pie y fotografía urbana","Café y compras en comercio local"],
+   loc:"Centro histórico", rec:"Usa calzado cómodo; es un recorrido para hacer sin afán.", p:"Entrada libre", h:"Espacio público"},
+  {s:"tren", t:"Experiencia", n:"Estación del Tren de Zipaquirá", img:"https://commons.wikimedia.org/wiki/Special:Redirect/file/Estaci%C3%B3n_TREN_Zipaquir%C3%A1.jpg", credit:"https://commons.wikimedia.org/wiki/File:Estaci%C3%B3n_TREN_Zipaquir%C3%A1.jpg", author:"JuanPeriodista", license:"CC BY-SA 4.0",
+   d:"La estación histórica de Zipaquirá, también conocida como Estación Tres Esquinas, es hoy un punto de referencia cultural y turístico del municipio.",
+   imp:"Fue inaugurada el 8 de diciembre de 1927 y es una de las edificaciones ferroviarias patrimoniales de Zipaquirá.",
+   act:["Observar la arquitectura de la estación","Tomar fotografías del exterior","Iniciar desde aquí un recorrido por el centro histórico"],
+   loc:"Zipaquirá, Cundinamarca", rec:"Combínala con el recorrido por las plazas y calles del centro histórico.", p:"Entrada libre", h:"Espacio público / consultar actividades"},
+
+  {s:"tren", t:"Experiencia", n:"Tren turístico de la Sabana", img:"https://zipaquiraturistica.com/dashboard-zipa-turis/storage/blog/awUQCrpkCu5rjpoMOvPElSdsZsKZB5EGJPihwXqZ.jpg", credit:"https://zipaquiraturistica.com/",
+   d:"Llega desde Bogotá en tren y empieza el paseo desde la estación.",
+   imp:"Según guías de viaje funciona fines de semana y festivos, con salida desde la Estación de la Sabana en Bogotá, y suele llenarse.",
+   act:["Disfrutar el trayecto por la Sabana","Combinar el viaje con el recorrido por el centro"],
+   loc:"Estación del tren en Zipaquirá", rec:"Compra con tiempo y confirma días y horarios con el operador.", p:"Tarifa del operador", h:"Días y horarios del operador"},
+  {s:"plaza", t:"Familia y recreación", n:"Ciclovía dominical", img:"https://extrategiamedios.com/wp-content/uploads/2025/01/419885216_1293095044893500_4599307742373791243_n.jpg", credit:"https://extrategiamedios.com/", author:"Extrategia Medios",
+   d:"Un recorrido de domingo para pedalear, caminar o patinar con paradas en el centro histórico, cafés y restaurantes.",
+   imp:"Es una forma activa y gratuita de conocer el municipio en familia.",
+   act:["Pedalear, caminar o patinar","Parar en cafés y restaurantes del centro"],
+   loc:"Vías habilitadas en Zipaquirá", rec:"Lleva agua, protección solar y consulta el recorrido vigente.", p:"Entrada libre", h:"Domingos; consultar horario actualizado"},
+  {s:"montana", t:"Naturaleza", n:"Escapadas cercanas: Suesca", img:"https://commons.wikimedia.org/wiki/Special:FilePath/Rocas_de_Suesca.JPG?width=900", credit:"https://commons.wikimedia.org/wiki/File:Rocas_de_Suesca.JPG",
+   d:"Laguna, caminatas y escalada a poca distancia.",
+   imp:"Suesca, Tabio y Guatavita completan un plan de varios días por los pueblos de la Sabana.",
+   act:["Caminatas y paisaje","Escalada con operadores autorizados"],
+   loc:"Municipios vecinos de la Sabana", rec:"Planea el transporte con anticipación.", p:TBC_P, h:TBC_H}
 ];
 
 const ERAS = [
-  {y:"Antes del siglo XVI", t:"Territorio muisca", s:"Pueblos ancestrales que habitaron y comerciaron en la Sabana.", m:"La región fue territorio muisca. Sus habitantes intercambiaban productos con otros pueblos y dejaron un legado que hoy se estudia y se exhibe en el Museo Arqueológico."},
+  {y:"Antes del siglo XVI", t:"Territorio muisca", s:"Pueblos ancestrales que habitaron y comerciaron en la Sabana.", m:"La región fue territorio muisca. Sus habitantes intercambiaban productos con otros pueblos y dejaron un legado que hoy se estudia en museos de Colombia."},
   {y:"Época colonial", t:"Villa de Zipaquirá", s:"El pueblo se consolida y levanta sus primeros templos.", m:"Durante la Colonia la población se organiza como villa. De esa etapa heredó su trazado urbano, sus plazas y las iglesias de estilo colonial que siguen en pie."},
   {y:"1781", t:"Capitulaciones de Zipaquirá", s:"Un capítulo clave de la Revuelta de los Comuneros.", m:"En el marco de la Revuelta de los Comuneros se firmaron las llamadas Capitulaciones de Zipaquirá, un episodio que ubica al municipio en la historia política del país. De ahí el nombre de su plaza principal."},
-  {y:"Hoy", t:"Ciudad cultural", s:"Museos, música, festivales y vida de pueblo.", m:"Casas de cultura, museos, una agenda de festivales y la huella de familias como los Quevedo mantienen viva la identidad local, abierta a quienes visitan."}
+  {y:"Independencia", t:"Memoria republicana", s:"Plazas y monumentos que recuerdan a los próceres.", m:"El Parque de la Independencia, antigua plaza de mercado, se renovó para conmemorar el bicentenario de la Independencia y hoy tiene una escultura de Antonio Nariño. La Plaza de los Mártires recuerda a seis mártires locales."},
+  {y:"Siglo XX", t:"Letras, música y formación", s:"Una ciudad que forma artistas y lectores.", m:"La familia Quevedo dejó un legado de literatura, poesía, música y pintura. El escritor Gabriel García Márquez estudió el bachillerato en Zipaquirá, y hoy un centro cultural lleva su nombre."},
+  {y:"Hoy", t:"Municipio cultural", s:"Museos, música, festivales y vida de pueblo.", m:"Casas de cultura, museos, plazas animadas, una agenda de festivales y la ciclovía dominical mantienen viva la identidad local, abierta a quienes visitan."}
 ];
 
 const PILLARS = [
   {t:"Patrimonio construido", d:"Plazas, casonas y templos de estilo colonial en el centro histórico."},
+  {t:"Arquitectura", d:"Fachadas de piedra, techos verdes republicanos y calles peatonales."},
+  {t:"Memoria e historia", d:"Los Comuneros, la Independencia y los mártires locales."},
   {t:"Música y letras", d:"Un legado artístico que se vive en casas de cultura y museos."},
   {t:"Fiestas y encuentros", d:"Festivales y celebraciones que reúnen a vecinos y visitantes."},
   {t:"Cocina de la Sabana", d:"Platos tradicionales que cuentan cómo se come en la región."}
 ];
 
 const FOOD = [
-  {n:"Sobrebarriga al horno", d:"El plato típico de la región, cocinado despacio hasta quedar tierno."},
-  {n:"Sobrebarriga en salsa criolla", d:"La misma tradición, con hogao casero y mucho sabor."},
-  {n:"Papas salmueras", d:"El acompañamiento clásico: papas cocidas en salmuera, según la receta tradicional."}
+  {n:"Sobrebarriga al horno", d:"El plato típico de la región, cocinado despacio hasta quedar tierno.", img:"https://lapalmaesvida.com/wp-content/uploads/receta-de-sobrebarriga-al-horno.webp", credit:"https://lapalmaesvida.com/recetas/sobrebarriga-al-horno/"},
+  {n:"Sobrebarriga en salsa criolla", d:"La misma tradición, con hogao casero y mucho sabor.", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2-zmV7ZvsZliWN1oiHA7JEVbtCknZcHUurT9oWFBxJNX6Z5WLDhwo2Wk&s=10"},
+  {n:"Papas salmueras", d:"El acompañamiento clásico: papas cocidas en salmuera, según la receta tradicional.", img:"https://vecinavegetariana.com/wp-content/uploads/2022/06/papas-saladas-2-1-678x1024.jpeg", credit:"https://vecinavegetariana.com/es/verduras-horneadas-en-hoja-de-platano/"},
+  {n:"Plato del minero", d:"Carne servida con papas saladas de textura arrugada, un clásico que cada vez es más escaso.", img:"https://www.researchgate.net/publication/319069849/figure/fig5/AS:526348613165056@1502502696071/Figura-5-Plato-minero-Fotografia-del-autor-2011.png", credit:"https://www.researchgate.net/figure/Figura-5-Plato-minero-Fotografia-del-autor-2011_fig5_319069849"},
+  {n:"Tamal de calabaza", d:"Plato tradicional de la Sabana, servido en desayunos con productos locales.", img:"https://imagenes2.eltiempo.com/files/og_thumbnail/uploads/2017/12/14/5a32f92b45087.jpeg", credit:"https://www.eltiempo.com/"},
+  {n:"Trucha y productos de la zona", d:"Algunos restaurantes locales cocinan con trucha del Neusa y verduras de Cogua.", img:"https://imag.bonviveur.com/trucha-a-la-plancha-casera.jpg", credit:"https://imag.bonviveur.com/trucha-a-la-plancha-casera.jpg"}
+];
+const SWEETS = [
+  {n:"Caramelito rojo", feat:true, d:"El dulce emblemático de Zipaquirá: un caramelo estirado de color rosado o rojo brillante, hecho solo con agua, limón y azúcar. Según guías locales se elabora en el municipio desde el siglo XIX; llegó de España y las mujeres de la región lo aprendieron en la época colonial. Las «carameleras» lo vendían a los viajeros del tren, y Jorge Velosa le dedicó una canción. Hoy lo hacen muy pocas familias, por eso comprarlo apoya una tradición que corre riesgo de perderse. Pregunta por él en negocios típicos del centro histórico o en la Plaza de los Comuneros.", img:"https://zipaquiraturistica.com/dashboard-zipa-turis/storage/ciudades/3_2.webp", credit:"https://zipaquiraturistica.com/dashboard-zipa-turis/storage/ciudades/3_2.webp", author:"Zipaquirá Turística"},
+  {n:"Obleas y amasijos", d:"Dulces y panes de horno que hacen parte de las tradiciones de la región.", img:"https://956fm.boyaca.gov.co/wp-content/uploads/2023/03/22bf8d2d-33a3-486b-9327-de1e3a566af2.jpg", credit:"https://956fm.boyaca.gov.co/"},
+  {n:"Brevas, almíbares y tortas", d:"Postres tradicionales que se encuentran en pastelerías del centro.", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI7CygyxNIxckoZMGjDmXz_6YXxMD9IpFfov804S_lbMTSuf9icH9BL-wE&s=10"},
+  {n:"Torta de queso y arroz con leche", d:"Dulces caseros con lácteos de la región.", img:"https://comerant.com/wp-content/uploads/2020/04/torta-de-queso.png", credit:"https://comerant.com/"}
+];
+const FOODPLACES = [
+  {n:"La Puerta Falsa", d:"Restaurante tradicional de cocina santafereña, con sede en Zipaquirá en la Plaza de los Comuneros.", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuVbdd5fpXT4ZFWEbH7mnaxm761oV2ADBAfCBO82QYNllFT4WgLdXwwJs&s=10"},
+  {n:"La Carreta", d:"Restaurante tradicional de Zipaquirá especializado en carnes y parrilla al carbón.", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fgVAyAQM1E3IRuAdQV00YFAHrbsUFc0klhzCBhX-jEVe2el3e0EUO68&s=10"},
+  {n:"Alma Café", d:"Cafetería de especialidad con café y repostería en un ambiente acogedor.", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7WlzlkDlpob5mg1HOkKvP0c0EyKh96k_kCj8YBLsitYstXVKf8OLGFm8&s=10"}
 ];
 
 const ICONS = {
@@ -573,30 +757,82 @@ const ICONS = {
   music:'<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>',
   train:'<rect x="5" y="3" width="14" height="14" rx="3"/><path d="M5 11h14M8 21l2-4M16 21l-2-4"/>',
   food:'<path d="M5 3v7a2 2 0 0 0 4 0V3M7 3v18M17 3c-2 2-3 4-3 8h6V3zM17 11v10"/>',
-  mountain:'<path d="m3 20 6-11 4 6 3-4 5 9z"/>'
+  mountain:'<path d="m3 20 6-11 4 6 3-4 5 9z"/>',
+  church:'<path d="M12 2v5M9.5 4.5h5M6 22V11l6-4 6 4v11M10 22v-5h4v5"/>',
+  book:'<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 19V5M9 7h6"/>',
+  bike:'<circle cx="6" cy="16" r="3.5"/><circle cx="18" cy="16" r="3.5"/><path d="M6 16l4-7h5l3 7M10 9l2 7"/>',
+  family:'<circle cx="8" cy="7" r="2.5"/><circle cx="16" cy="8" r="2"/><path d="M3 20v-4a5 5 0 0 1 10 0v4M14 20v-3a4 4 0 0 1 7 0v3"/>'
 };
+const ACT_CATS = ["Todas","Culturales","Históricas","Religiosas","Gastronómicas","Familiares","Recreativas","Naturaleza","Educativas"];
 const ACTS = [
-  {i:"walk", c:"#2a5bd7", n:"Recorrido a pie por el centro", d:"Camina entre plazas, calles empedradas y fachadas coloniales."},
-  {i:"museum", c:"#6f5bd6", n:"Ruta de museos", d:"Combina la Casa Museo Quevedo Zornoza y el Museo Arqueológico en una mañana."},
-  {i:"music", c:"#e8694f", n:"Cultura en vivo", d:"Consulta la programación de la Casa de la Cultura y de los festivales."},
-  {i:"train", c:"#1f9d9a", n:"Viaje en tren", d:"Haz del trayecto desde Bogotá parte del paseo."},
-  {i:"food", c:"#c9a45c", n:"Almuerzo tradicional", d:"Prueba la sobrebarriga con papas salmueras en un restaurante local."},
-  {i:"mountain", c:"#1b2b4e", n:"Escapada a la naturaleza", d:"Suma un día de paisaje y aire libre en pueblos vecinos como Suesca."}
+  {k:"Culturales", i:"museum", c:"#6f5bd6", n:"Visita a casas-museo", d:"Conoce la Casa Museo Quevedo Zornoza y su legado literario y musical. Es una ventana a la vida cultural de antes."},
+  {k:"Culturales", i:"music", c:"#e8694f", n:"Cultura en vivo", d:"Consulta la programación de las casas de cultura y los festivales: música, danza y muestras abiertas."},
+  {k:"Históricas", i:"walk", c:"#2a5bd7", n:"Ruta de las plazas históricas", d:"Une la Plaza de los Comuneros, el Parque de la Independencia y la Plaza de los Mártires para leer la historia del municipio."},
+  {k:"Históricas", i:"book", c:"#1b2b4e", n:"Sobre la huella de los Comuneros", d:"Recorre los lugares ligados a las Capitulaciones de 1781 y descubre por qué la plaza lleva ese nombre."},
+  {k:"Religiosas", i:"church", c:"#9a7117", n:"Patrimonio religioso", d:"Visita los templos del centro con calma y respeto, fuera de los horarios de culto, para apreciar su arquitectura."},
+  {k:"Gastronómicas", i:"food", c:"#c9a45c", n:"Almuerzo tradicional", d:"Prueba la sobrebarriga con papas salmueras o el plato del minero en un restaurante local."},
+  {k:"Gastronómicas", i:"food", c:"#e8694f", n:"Ruta del caramelito rojo y otros dulces", d:"Busca el caramelito rojo, el dulce emblemático de Zipaquirá, y completa con obleas, brevas, tortas y postres tradicionales."},
+  {k:"Familiares", i:"family", c:"#1f9d9a", n:"Paseo por parques y plazas", d:"Un plan tranquilo y gratuito para ir con niños y mayores, con cafés y heladerías cerca."},
+  {k:"Recreativas", i:"bike", c:"#2a5bd7", n:"Ciclovía dominical", d:"Pedalea, camina o patina por un recorrido que pasa por el centro histórico."},
+  {k:"Recreativas", i:"train", c:"#1f9d9a", n:"Viaje en tren", d:"Haz del trayecto desde Bogotá parte del paseo (consulta días y tarifas con el operador)."},
+  {k:"Naturaleza", i:"mountain", c:"#1b2b4e", n:"Escapada a Suesca", d:"Suma un día de paisaje, caminatas y aire libre en el municipio vecino."},
+  {k:"Educativas", i:"museum", c:"#6f5bd6", n:"Ruta de museos para estudiantes", d:"Combina museos y plazas para aprender historia local en una jornada, ideal para grupos escolares."},
+  {k:"Educativas", i:"book", c:"#9a7117", n:"Tras los pasos de García Márquez", d:"Visita el centro cultural que lleva su nombre y conoce la relación del escritor con el municipio."}
 ];
 
 const EVENTS = [
-  {t:"Cultura", n:"Festival Villa de la Sal", d:"Música, tradición y ambiente de fiesta en el municipio."},
-  {t:"Cultura", n:"Aniversario de la ciudad", d:"Presentaciones artísticas, espectáculos folclóricos, juegos tradicionales y conciertos."},
-  {t:"Cultura", n:"Programación de la Casa de la Cultura", d:"Muestras, presentaciones y actividades artísticas durante el año."}
+  {t:"Recreación", n:"Ciclovía dominical", d:"Recorrido para pedalear, caminar o patinar con paradas en el centro histórico, cafés y restaurantes.", w:"Todos los domingos · consultar horario"},
+  {t:"Cultura", n:"Festival Villa de la Sal", d:"Música, tradición y ambiente de fiesta en el municipio.", w:"Fecha por confirmar"},
+  {t:"Cultura", n:"Aniversario de la ciudad", d:"Presentaciones artísticas, espectáculos folclóricos, juegos tradicionales y conciertos.", w:"Fecha por confirmar"},
+  {t:"Cultura", n:"Programación de casas de cultura", d:"Muestras, presentaciones y actividades artísticas durante el año.", w:"Consultar programación oficial"},
+  {t:"Cultura", n:"Ruta de los museos", d:"Itinerario cultural por los museos del municipio, con visitas y actividades de acuerdo con cada espacio.", w:"Consultar programación oficial"}
 ];
 
 const PRICES = [
-  {n:"Plaza de los Comuneros", p:"Libre", h:"Espacio público", free:true},
-  {n:"Iglesias coloniales", p:"Libre", h:"Según cada parroquia; respeta los horarios de culto", free:true},
-  {n:"Casa Museo Quevedo Zornoza", p:"Por confirmar", h:"Por confirmar"},
-  {n:"Museo Arqueológico", p:"Por confirmar", h:"Por confirmar"},
-  {n:"Casa de la Cultura Arturo Wagner", p:"Según la actividad", h:"Según la programación"},
-  {n:"Tren turístico de la Sabana", p:"Tarifa del operador", h:"Días y horarios del operador"}
+  {n:"Plaza de los Comuneros", p:"Libre", h:"Espacio público", i:"Punto de partida del recorrido.", free:true},
+  {n:"Parque de la Independencia", p:"Libre", h:"Espacio público", i:"Cafés, restaurantes y bares alrededor.", free:true},
+  {n:"Plaza de los Mártires", p:"Libre", h:"Espacio público", i:"Obelisco con los nombres de seis mártires.", free:true},
+  {n:"Calles del centro histórico", p:"Libre", h:"Espacio público", i:"Recorrido peatonal.", free:true},
+  {n:"Templos y patrimonio religioso", p:"Libre", h:"Según cada parroquia", i:"Respeta los horarios de culto.", free:true},
+  {n:"Ciclovía dominical", p:"Libre", h:"Domingos · consultar horario actualizado", i:"Lleva agua y protección solar.", free:true},
+  {n:"Casa Museo Quevedo Zornoza", p:TBC_P, h:TBC_H, i:"Confirma antes de ir."},
+  {n:"Centro Cultural Casa del Nobel", p:TBC_P, h:TBC_H, i:"Pregunta por talleres y muestras."},
+  {n:"Tren turístico de la Sabana", p:"Tarifa del operador", h:"Días y horarios del operador", i:"Según guías, fines de semana y festivos; confirmar."},
+  {n:"Escapadas cercanas (Suesca)", p:TBC_P, h:TBC_H, i:"Depende del operador o sitio."},
+  {n:"Festivales y eventos", p:"Según el evento", h:"Consultar programación oficial", i:"Muchos eventos públicos son gratuitos; confirmar."}
+];
+
+const HOTELS = [
+  {n:"Hotel Camino de la Sal", t:"Hotel", d:"Hotel de Zipaquirá. Una reseña de El Tiempo destaca su desayuno buffet con platos locales como tamal de calabaza, buñuelos y caldo de costilla.", web:"https://hotelcaminodelasal.com/"},
+  {n:"Hotel Cacique Real", t:"Hotel", d:"Hotel en Zipaquirá con sitio web propio. Consulta servicios, tarifas y disponibilidad.", web:"https://hotelcaciquereal.com/"}
+];
+const RESTS = [
+  {n:"Labriego", t:"Cocina colombiana", d:"Ingredientes locales como trucha del Neusa; en una esquina de la Plaza de la Independencia."},
+  {n:"La Gaceta Café Bar", t:"Café y coctelería", d:"En la Plaza de la Independencia, con cócteles inspirados en la cultura local."},
+  {n:"La Puerta Falsa", t:"Cocina tradicional", d:"Sede en la Plaza de los Comuneros, con cocina tradicional santafereña."},
+  {n:"La Carreta", t:"Parrilla", d:"Restaurante tradicional con carnes y preparaciones a la parrilla al carbón."},
+  {n:"Alma Coffee & Bakery", t:"Cafetería", d:"Café de especialidad y repostería en un ambiente acogedor."},
+  {n:"Pork", t:"Parrilla y cerveza artesanal", d:"Costillas, BBQ y cerveza artesanal en ambiente rockero."},
+  {n:"Veró Comida Casual", t:"Comida casual", d:"A pocos minutos del centro histórico, con ambiente tranquilo."},
+  {n:"Casa Trattoria", t:"Restaurante", d:"Restaurante recomendado para celebraciones."}
+];
+
+const TIPS = [
+  {t:"Cómo llegar", l:["Zipaquirá está unos 25 km al norte de Bogotá.","En transporte público: TransMilenio hasta Portal Norte y allí buses hacia Zipaquirá.","En carro: Autopista Norte. En horas pico y festivos el tráfico puede ser lento."]},
+  {t:"Opciones de transporte", l:["Bus intermunicipal desde Portal Norte (confirma frecuencias y tarifa).","Tren turístico de la Sabana, según guías en fines de semana y festivos; confirma con el operador.","Dentro del casco urbano: a pie o en taxi."]},
+  {t:"Para recorrer el municipio", l:["El centro histórico se recorre caminando: Plaza de los Comuneros, Parque de la Independencia y Plaza de los Mártires.","Reserva medio día para museos y plazas, y otro para cocina y cafés.","Los domingos hay ciclovía."]},
+  {t:"Antes del viaje", l:["Confirma precios y horarios en cada sitio.","Lleva ropa cómoda y abrigo ligero: la Sabana puede ser fresca.","Lleva efectivo y medios de pago; algunos negocios pequeños no aceptan tarjeta."]},
+  {t:"Visita responsable", l:["Respeta los horarios de culto en templos.","No dejes basura y usa los puntos de reciclaje.","Pide permiso antes de fotografiar a las personas."]},
+  {t:"Cuida el patrimonio y apoya lo local", l:["No toques ni escribas sobre fachadas ni monumentos.","Compra en tiendas, cafés y panaderías locales.","Contrata guías y servicios locales y comparte tu experiencia con respeto."]}
+];
+
+const ECO = [
+  {t:"Cuida los espacios públicos", d:"Plazas y parques son de todos: déjalos mejor de como los encontraste."},
+  {t:"Respeta el patrimonio", d:"Fachadas, monumentos y templos son memoria viva: observa sin dañar."},
+  {t:"Reduce residuos", d:"Lleva tu botella reutilizable y bolsa propia; separa lo que puedas."},
+  {t:"Apoya a los comerciantes locales", d:"Come, compra y duerme en negocios del municipio: el dinero se queda en la comunidad."},
+  {t:"Respeta las tradiciones", d:"Pregunta antes de participar o fotografiar celebraciones y rituales."},
+  {t:"Viaja de forma sostenible", d:"Prefiere caminar, el transporte público o compartido y reparte tus visitas por distintos lugares."}
 ];
 
 /* ============ RENDER ============ */
@@ -609,24 +845,53 @@ function el(tag, attrs={}, kids=[]){
   [].concat(kids).forEach(c=>e.append(c));
   return e;
 }
+/* Foto real si existe; si no, ilustración */
+function pic(box, img, alt, sceneType, cb){
+  box.innerHTML = "";
+  if(!img){ box.innerHTML = scene(sceneType); return; }
+  const im = new Image();
+  im.alt = alt; im.loading = "lazy"; im.decoding = "async";
+  im.style.width = "100%"; im.style.height = "100%"; im.style.objectFit = "cover"; im.style.display = "block";
+  im.onload = ()=>{ if(cb) cb(); };
+  im.onerror = ()=>{ box.innerHTML = scene(sceneType); if(cb) cb(); };
+  box.append(im);
+  im.src = img;
+}
 
 // Hero
-$("#heroArches").innerHTML = ["iglesia","plaza","montana"].map(s=>`<div class="arch">${scene(s)}</div>`).join("");
+const HERO = [
+  ["https://www.zipaquira.travel/wp-content/uploads/2025/03/maqz-12-1024x683.jpg","plaza","Zipaquirá: patrimonio y cultura"],
+  ["https://live.staticflickr.com/2517/3844650919_ce28b64514_b.jpg","plaza","Zipaquirá: paisaje urbano y tradición"],
+  ["https://photos.wikimapia.org/p/00/00/75/08/40_big.jpg","plaza","Zipaquirá: arquitectura y color"]
+];
+$("#heroArches").append(...HERO.map(h=>{ const d = el("div",{class:"arch"}); pic(d,h[0],h[2],h[1]); return d; }));
+
+// Proyecto
+$("#goals").append(...GOALS.map((g,i)=>el("div",{class:"goal"},[el("div",{class:"n",text:String(i+1)}),el("h3",{text:g.t}),el("p",{text:g.d})])));
 
 // Lugares + filtros
-const TAGS = ["Todos","Patrimonio","Cultura","Experiencia","Cerca"];
+const TAGS = ["Todos","Patrimonio","Plazas y parques","Religioso","Cultura","Experiencia","Familia y recreación","Naturaleza"];
 let activeTag = "Todos";
 function renderPlaces(){
   const box = $("#placeCards"); box.innerHTML = "";
   PLACES.filter(p=>activeTag==="Todos"||p.t===activeTag).forEach(p=>{
-    const card = el("article",{class:"card"},[
-      el("div",{class:"arch",html:scene(p.s)}),
+    const arch = el("div",{class:"arch"});
+    const kids = [arch];
+    const cr = el("p",{class:"credit",hidden:"",html:p.credit ? `Foto: <a href="${p.credit}" target="_blank" rel="noopener">${p.author ? p.author : "Fuente"}</a>${p.license ? ` · Licencia: ${p.license}` : ""}` : ""});
+    pic(arch,p.img,p.n,p.s,()=>{ if(p.credit) cr.hidden=false; });
+    kids.push(cr);
+    kids.push(
       el("span",{class:"chip","data-t":p.t,text:p.t}),
       el("h3",{text:p.n}),
       el("p",{text:p.d}),
-      el("details",{},[el("summary",{text:"Más información"}),el("p",{text:p.m})])
-    ]);
-    box.append(card);
+      el("details",{},[el("summary",{text:"Más información"}),
+        el("p",{text:p.imp}),
+        el("ul",{class:"facts",style:"margin-top:10px",html:
+          `<li><b>Qué hacer:</b> ${p.act.join("; ")}.</li><li><b>Ubicación:</b> ${p.loc}</li><li><b>Recomendación:</b> ${p.rec}</li><li><b>Precio:</b> ${p.p}</li><li><b>Horario:</b> ${p.h}</li>`}),
+        el("a",{class:"btn btn-blue btn-sm",style:"margin-top:12px",href:mapLink(p.n),target:"_blank",rel:"noopener",text:"Ver en el mapa"})
+      ])
+    );
+    box.append(el("article",{class:"card"},kids));
   });
 }
 const fbox = $("#filters");
@@ -651,26 +916,60 @@ $("#timeline").append(...ERAS.map((e,i)=>{
 $("#pillars").append(...PILLARS.map(p=>el("div",{class:"pillar"},[el("h3",{text:p.t}),el("p",{text:p.d})])));
 
 // Gastronomía
-$("#food").append(...FOOD.map(f=>el("div",{class:"dish"},[el("div",{class:"plate",html:scene("plato")}),el("div",{},[el("h3",{text:f.n}),el("p",{text:f.d})])])));
+function dish(f){ if(f.feat){ const pl = el("div",{class:"plate"}); pic(pl,f.img,f.n,"plato"); return el("div",{class:"dish featured"},[pl,el("div",{},[el("span",{class:"tag",text:"★ Dulce emblemático de Zipaquirá"}),el("h3",{text:f.n}),el("p",{text:f.d})])]); } const pl = el("div",{class:"plate"}); const body = el("div",{},[el("h3",{text:f.n}),el("p",{text:f.d})]);
+  pic(pl,f.img,f.n,"plato",()=>{ if(f.credit) body.append(el("p",{class:"credit",style:"margin-top:4px",html:`Foto: <a href="${f.credit}" target="_blank" rel="noopener">Wikimedia Commons</a>`})); });
+  return el("div",{class:"dish"},[pl,body]); }
+$("#food").append(...FOOD.map(dish));
+$("#sweets").append(...SWEETS.map(dish));
+$("#foodPlaces").append(...FOODPLACES.map(f=>{
+  const d = dish(f);
+  d.lastChild.append(el("a",{href:mapLink(f.n),target:"_blank",rel:"noopener",style:"font-size:.88rem;color:var(--blue);font-weight:600;display:inline-block;margin-top:6px",text:"Ver ubicación"}));
+  return d;
+}));
 
-// Actividades
-$("#acts").append(...ACTS.map(a=>el("div",{class:"act"},[
-  el("div",{class:"ico",style:`background:${a.c}`,html:`<svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[a.i]}</svg>`}),
-  el("h3",{text:a.n}), el("p",{text:a.d})
-])));
+// Actividades + filtros
+let activeCat = "Todas";
+function renderActs(){
+  const box = $("#acts"); box.innerHTML = "";
+  ACTS.filter(a=>activeCat==="Todas"||a.k===activeCat).forEach(a=>box.append(el("div",{class:"act"},[
+    el("div",{class:"ico",style:`background:${a.c}`,html:`<svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[a.i]}</svg>`}),
+    el("span",{class:"chip",text:a.k}), el("h3",{style:"margin-top:8px",text:a.n}), el("p",{text:a.d})
+  ])));
+}
+const afb = $("#actFilters");
+ACT_CATS.forEach(c=>{
+  const b = el("button",{type:"button","aria-pressed":c===activeCat?"true":"false",text:c});
+  b.addEventListener("click",()=>{ activeCat=c; afb.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x.textContent===c?"true":"false")); renderActs(); });
+  afb.append(b);
+});
+renderActs();
 
 // Agenda
 $("#events").append(...EVENTS.map(e=>el("article",{class:"event"},[
   el("div",{},[el("span",{class:"chip","data-t":e.t,text:e.t}),el("h3",{style:"margin-top:8px",text:e.n}),el("p",{style:"margin-top:4px",text:e.d})]),
-  el("span",{class:"when",text:"Fecha por confirmar"})
+  el("span",{class:"when",text:e.w})
 ])));
 
 // Precios
 $("#priceRows").append(...PRICES.map(r=>{
   const tr = el("tr");
-  tr.append(el("th",{scope:"row",text:r.n}), el("td",{class:r.free?"free":(r.p==="Por confirmar"?"tbc":""),text:r.p}), el("td",{class:r.h==="Por confirmar"?"tbc":"",text:r.h}));
+  const tbc = v=>/^Consultar/.test(v);
+  tr.append(el("th",{scope:"row",text:r.n}), el("td",{class:r.free?"free":(tbc(r.p)?"tbc":""),text:r.p}), el("td",{class:tbc(r.h)?"tbc":"",text:r.h}), el("td",{text:r.i}));
   return tr;
 }));
+
+// Hoteles y restaurantes
+function biz(b){
+  const kids=[el("span",{class:"chip",text:b.t}),el("h3",{text:b.n}),el("p",{text:b.d}),
+    el("div",{style:"display:flex;gap:8px;flex-wrap:wrap"},[el("a",{class:"btn btn-white btn-sm",href:mapLink(b.n),target:"_blank",rel:"noopener",text:"Ver ubicación"})].concat(b.web?[el("a",{class:"btn btn-line btn-sm",href:b.web,target:"_blank",rel:"noopener",text:"Sitio web"})]:[]))];
+  return el("article",{class:"biz"},kids);
+}
+$("#hotels").append(...HOTELS.map(biz));
+$("#restaurants").append(...RESTS.map(biz));
+
+// Información útil y turismo responsable
+$("#tips").append(...TIPS.map(t=>el("div",{class:"info"},[el("h3",{text:t.t}),el("ul",{html:t.l.map(x=>`<li>${x}</li>`).join("")})])));
+$("#eco").append(...ECO.map(e=>el("div",{class:"eco"},[el("h3",{text:e.t}),el("p",{text:e.d})])));
 
 // Reseñas
 const sel = $("#rPlace");
@@ -690,23 +989,26 @@ function loadReviews(){ try{ return JSON.parse(localStorage.getItem(KEY)||"[]");
 function saveReviews(list){ try{ localStorage.setItem(KEY,JSON.stringify(list)); return true; }catch(e){ return false; } }
 function renderReviews(){
   const box = $("#reviewList"); box.innerHTML = "";
+  const sum = $("#reviewSummary"); sum.innerHTML = "";
   const list = loadReviews();
   if(!list.length){ box.append(el("p",{class:"empty",text:"Aún no hay opiniones. Escribe la primera."})); return; }
+  const avg = list.reduce((a,r)=>a+r.rating,0)/list.length;
+  const rec = list.filter(r=>r.rec==="si").length;
+  sum.append(el("div",{class:"rv-top"},[el("span",{class:"big",text:avg.toFixed(1)}),el("span",{class:"st","aria-hidden":"true",text:"★".repeat(Math.round(avg))}),el("span",{class:"note",style:"margin:0",text:`${list.length} opinión${list.length>1?"es":""} · ${rec} lo recomiendan`})]));
   list.slice().reverse().forEach(r=>{
-    box.append(el("div",{class:"review"},[
-      el("div",{class:"top"},[el("b",{text:r.name}),el("span",{class:"st","aria-label":`${r.rating} de 5 estrellas`,text:"★".repeat(r.rating)})]),
-      el("div",{class:"pl",text:r.place}),
-      el("p",{text:r.text})
-    ]));
+    const top = el("div",{class:"top"},[el("b",{text:r.name}),el("span",{class:"st","aria-label":`${r.rating} de 5 estrellas`,text:"★".repeat(r.rating)})]);
+    const pl = el("div",{class:"pl",text:r.place});
+    if(r.rec) pl.append(el("span",{class:"rec"+(r.rec==="no"?" no":""),text:r.rec==="si"?"Lo recomienda":"No lo recomienda"}));
+    box.append(el("div",{class:"review"},[top,pl,el("p",{text:r.text})]));
   });
 }
 renderReviews();
 $("#reviewForm").addEventListener("submit",ev=>{
   ev.preventDefault();
-  const name=$("#rName").value.trim(), place=sel.value, text=$("#rText").value.trim(), msg=$("#rMsg");
+  const name=$("#rName").value.trim(), place=sel.value, text=$("#rText").value.trim(), rec=$("#rRec").value, msg=$("#rMsg");
   msg.classList.remove("err");
   if(!name||!place||!rating||!text){ msg.classList.add("err"); msg.textContent="Completa tu nombre, el lugar, la calificación y tu opinión."; return; }
-  const list = loadReviews(); list.push({name,place,rating,text,ts:Date.now()});
+  const list = loadReviews(); list.push({name,place,rating,rec,text,ts:Date.now()});
   if(saveReviews(list)){ msg.textContent="¡Gracias por compartir tu experiencia!"; ev.target.reset(); rating=0; paintStars(); renderReviews(); }
   else { msg.classList.add("err"); msg.textContent="No pudimos guardar tu opinión en este navegador. Inténtalo de nuevo."; }
 });
@@ -728,6 +1030,11 @@ const menuBtn=$("#menuBtn"), nav=$("#nav");
 menuBtn.addEventListener("click",()=>{ const o=nav.classList.toggle("open"); menuBtn.setAttribute("aria-expanded",o); });
 nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{ nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); }));
 document.addEventListener("keydown",e=>{ if(e.key==="Escape"){ nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); } });
+
+// Créditos
+(function(){ const ul=$("#credits"); const seen=new Set();
+  [...PLACES.map(p=>[p.n,p.credit]),...FOOD.map(f=>[f.n,f.credit])].forEach(([n,c])=>{ if(c&&!seen.has(c)){ seen.add(c); ul.append(el("li",{html:`${n}: <a href="${c}" target="_blank" rel="noopener">página del archivo (autor y licencia)</a>`})); } });
+})();
 </script>
 </body>
 </html>
