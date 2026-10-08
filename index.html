@@ -741,8 +741,8 @@ const FOOD = [
 ];
 const SWEETS = [
   {n:"Caramelito rojo", feat:true, d:"El dulce emblemático de Zipaquirá: un caramelo estirado de color rosado o rojo brillante, hecho solo con agua, limón y azúcar. Según guías locales se elabora en el municipio desde el siglo XIX; llegó de España y las mujeres de la región lo aprendieron en la época colonial. Las «carameleras» lo vendían a los viajeros del tren, y Jorge Velosa le dedicó una canción. Hoy lo hacen muy pocas familias, por eso comprarlo apoya una tradición que corre riesgo de perderse. Pregunta por él en negocios típicos del centro histórico o en la Plaza de los Comuneros.", img:"https://zipaquiraturistica.com/dashboard-zipa-turis/storage/ciudades/3_2.webp", credit:"https://zipaquiraturistica.com/dashboard-zipa-turis/storage/ciudades/3_2.webp", author:"Zipaquirá Turística", license:"Licencia no indicada en la fuente"},
-  {n:"Obleas y amasijos", d:"Dulces y panes de horno que hacen parte de las tradiciones de la región.", img:"https://956fm.boyaca.gov.co/wp-content/uploads/2023/03/22bf8d2d-33a3-486b-9327-de1e3a566af2.jpg", credit:"https://956fm.boyaca.gov.co/"},
-  {n:"Brevas, almíbares y tortas", d:"Postres tradicionales que se encuentran en pastelerías del centro.", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI7CygyxNIxckoZMGjDmXz_6YXxMD9IpFfov804S_lbMTSuf9icH9BL-wE&s=10"},
+  {n:"Obleas y amasijos", d:"Dulces y panes de horno que hacen parte de las tradiciones de la región.", img:"https://956fm.boyaca.gov.co/wp-content/uploads/2023/03/22bf8d2d-33a3-486b-9327-de1e3a566af2.jpg", credit:"https://956fm.boyaca.gov.co/", author:"956 FM Boyacá", license:"Licencia no indicada en la fuente"},
+  {n:"Brevas, almíbares y tortas", d:"Postres tradicionales que se encuentran en pastelerías del centro.", img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI7CygyxNIxckoZMGjDmXz_6YXxMD9IpFfov804S_lbMTSuf9icH9BL-wE&s=10", credit:"", author:"No identificable desde la URL actual", license:"No se pudo verificar una licencia"},
   {n:"Torta de queso y arroz con leche", d:"Dulces caseros con lácteos de la región.", img:"https://comerant.com/wp-content/uploads/2020/04/torta-de-queso.png", credit:"https://comerant.com/", author:"Comerant", license:"Licencia no indicada en la fuente"}
 ];
 const FOODPLACES = [
@@ -916,7 +916,7 @@ $("#timeline").append(...ERAS.map((e,i)=>{
 $("#pillars").append(...PILLARS.map(p=>el("div",{class:"pillar"},[el("h3",{text:p.t}),el("p",{text:p.d})])));
 
 // Gastronomía
-function dish(f){ if(f.feat){ const pl = el("div",{class:"plate"}); pic(pl,f.img,f.n,"plato"); return el("div",{class:"dish featured"},[pl,el("div",{},[el("span",{class:"tag",text:"★ Dulce emblemático de Zipaquirá"}),el("h3",{text:f.n}),el("p",{text:f.d})])]); } const pl = el("div",{class:"plate"}); const body = el("div",{},[el("h3",{text:f.n}),el("p",{text:f.d})]);
+function dish(f){ if(f.feat){ const pl = el("div",{class:"plate"}); pic(pl,f.img,f.n,"plato"); const body=el("div",{},[el("span",{class:"tag",text:"★ Dulce emblemático de Zipaquirá"}),el("h3",{text:f.n}),el("p",{text:f.d})]); if(f.credit) body.append(el("p",{class:"credit",style:"margin-top:4px",html:`Foto: <a href="${f.credit}" target="_blank" rel="noopener">Fuente</a>${f.author? ` · Autor/entidad: ${f.author}`: ""}${f.license? ` · Derechos/licencia: ${f.license}`: ""}`})); return el("div",{class:"dish featured"},[pl,body]); } const pl = el("div",{class:"plate"}); const body = el("div",{},[el("h3",{text:f.n}),el("p",{text:f.d})]);
   pic(pl,f.img,f.n,"plato",()=>{ if(f.credit) body.append(el("p",{class:"credit",style:"margin-top:4px",html:`Foto: <a href="${f.credit}" target="_blank" rel="noopener">Fuente</a>${f.author? ` · Autor/entidad: ${f.author}`: ""}${f.license? ` · Derechos/licencia: ${f.license}`: ""}`})); });
   return el("div",{class:"dish"},[pl,body]); }
 $("#food").append(...FOOD.map(dish));
